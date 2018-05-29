@@ -1,0 +1,11 @@
+{
+  "title": "Ecommerce Starter",
+  "source": "sass/",
+  "destination": "styleguide/",
+  "css": [
+    "../style.min.css"
+  ],
+  "js" : [
+    "../script.min.js"
+  ]
+}

@@ -14,7 +14,13 @@
     "gulp-shell": "^0.6.3",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-styledown": "0.0.2",
+    "gulp-styleguidejs": "^1.1.0",
     "gulp-uglify": "^3.0.0",
+    "kss": "^3.0.0-beta.20",
+    "michelangelo": "^0.7.0",
     "styledown": "^2.0.0-pre1"
+  },
+  "scripts": {
+    "kss": "kss --config kss-config.json"
   }
 }

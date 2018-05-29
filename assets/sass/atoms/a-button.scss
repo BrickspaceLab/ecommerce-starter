@@ -18,6 +18,20 @@
 *     <a class="a-button">Button</a>
 *     <button class="a-button">Button</button>
 */
+
+// Default Button
+//
+// Basic button
+//
+// Markup:
+// <button class="a-button {{modifier_class}}">Button Element</button>
+// <input class="a-button {{modifier_class}}" type="button" value="Input Button" />
+//
+// .a-button--primary - A small button.
+// .a-button--dark - A large button.
+// .a-button--invert - Inverted
+//
+// Styleguide atoms.buttons
 .a-button {
   margin-right: .5rem;
   transition: box-shadow .3s cubic-bezier(.8, .43, 0, .48);

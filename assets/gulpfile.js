@@ -10,6 +10,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var styledown = require('gulp-styledown');
 var uglify = require('gulp-uglify');
+var styleguidejs = require('gulp-styleguidejs');
+var StyleGuide = require('styleguidejs');
 
 
 gulp.task('compressCss', function () {
@@ -33,10 +35,21 @@ gulp.task('styledown', function () {
   return gulp.src(['sass/**/*.scss', '!sass/framework/**/*.scss'])
     .pipe(styledown({
       config: 'config.md',
-      filename: 'styleguide.html'
+      filename: 'page.styleguide.liquid'
     }))
     .pipe(gulp.dest('../'));
 });
+
+
+gulp.task('styleguidejs', function() {
+  gulp.src(['sass/**/*.scss', '!sass/framework/**/*.scss'])
+  .pipe(styleguidejs({
+    outputFile: "page.styleguide.liquid",
+    template: "styleguide-template.jade"
+  }))
+  .pipe(gulp.dest('../templates/'));
+});
+
 
 gulp.task('minifyJs', function (cb) {
   return gulp.src(['js/*.js', '!js/*.min.js'])
@@ -47,7 +60,9 @@ gulp.task('minifyJs', function (cb) {
 
 gulp.task('watch', function() {
   gulp.watch('js/*.js', ['minifyJs']);
-  gulp.watch('sass/**/*.scss', ['compressCss']);
   gulp.watch('sass/**/*.scss', ['compileCss']);
-  gulp.watch('sass/**/*.scss', ['styledown']);
+  gulp.watch('sass/**/*.scss', ['compressCss']);
+  // gulp.watch('sass/**/*.scss', ['styledown']);
+  // gulp.watch('sass/**/*.scss', ['styleguidejs']);
+
 });

@@ -1,0 +1,3200 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Styleguide</title><style>@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+
+body {
+    background: #fbfbfb;
+    font-size: 15px;
+    line-height: 22px;
+    font-family: 'Open Sans', sans-serif;
+    color: #222;
+}
+
+code {
+    display: inline-block;
+    padding: 2px 4px;
+    color: green;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    font-size: 12px;
+    border-radius: 2px;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+.generated {
+    font-size: 11px;
+    color: #999;
+    margin-bottom: 2em;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 20px 70px;
+}
+
+/* headings */
+h1, h2, h3, h4, h5 {
+    font-size: 1em;
+    line-height: 1;
+    font-weight: normal;
+    margin: 0 0 .5em 0;
+}
+
+.title-large {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0 0 .2em 0;
+}
+
+.title-medium {
+    font-size: 1.4em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.title-small {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* divider */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #c9c9c9;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+hr.small {
+    margin: 2em 0;
+    width: 50px;
+}
+
+/* index */
+.index ul {
+    margin: 0 0 .5em 1.3em;
+    padding: 0;
+    list-style: square;
+}
+
+.index a {
+    color: darkslateblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.index a:hover {
+    text-decoration: underline;
+}
+
+/* navigation */
+.nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #222;
+    border-right: 1px solid #c9c9c9;
+    z-index: 100;
+    -webkit-transition: width .3s;
+    -moz-transition: width .3s;
+    transition: width .3s;
+}
+
+.nav:hover {
+    width: 350px;
+}
+
+.nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 15px 0;
+    opacity: .3;
+}
+
+.nav:hover ul {
+    opacity: 1;
+}
+
+.nav a {
+    padding: 5px 20px;
+    color: #fefefe;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* section */
+.section {
+    display: none;
+    margin-top: 75px;
+}
+
+.section:target {
+    display: block;
+}
+
+.section > hr {
+    margin-top: 75px;
+}
+
+.section:last-of-type {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* guide */
+.guide {
+    margin: 30px 0;
+}
+
+.guide h3:before {
+    margin-right: .3em;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.guide h3 a.toggle {
+    float: right;
+    font-size: 10px;
+    color: #ccc;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.guide .description {
+    max-width: 650px;
+}
+
+.guide .description ol,
+.guide .description ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.guide .description p {
+    margin: 0 0 10px 0;
+}
+
+.guide .hidden {
+    display: none;
+}
+
+.guide .preview iframe {
+    width: 100%;
+    border: none;
+    margin: 0;
+    background: #fff;
+}
+
+.guide .source {
+    min-height: 60px;
+    font-size: 12px;
+    line-height: 17px;
+    background-color: #f7f7f9;
+    white-space: pre;
+    overflow: auto;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+/* misc */
+.sourceJs,
+.sourceCss {
+    display: none;
+}
+
+
+/* highlight js */
+/* theme: github */
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #998;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #099;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula {
+  color: #d14;
+}
+
+.hljs-title,
+.hljs-id,
+.coffeescript .hljs-params,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold;
+}
+
+.javascript .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal;
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: #008080;
+}
+
+.hljs-regexp {
+  color: #009926;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073;
+}
+
+.hljs-built_in,
+.lisp .hljs-title,
+.clojure .hljs-built_in {
+  color: #0086b3;
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.diff .hljs-change {
+  background: #0086b3;
+}
+
+.hljs-chunk {
+  color: #aaa;
+}
+</style></head><body><div class="container"><h1 class="title-large">Styleguide</h1><time class="generated">Generated at Tue May 29 2018 02:13:51 GMT-0400 (EDT)</time><hr class="small"><nav class="nav"><ul></ul></nav><nav class="index"><ul></ul></nav><textarea class="sourceCss">//================================================//
+// VARIABLES
+// scss variables to be used across
+// everything.
+// color variables are adjusted with
+// each new project
+@import &quot;variables/v-colors.scss&quot;;
+@import &quot;variables/v-fonts.scss&quot;;
+@import &quot;variables/v-sizes.scss&quot;;
+
+
+//================================================//
+// FRAMEWORKS
+// boilerplate and template code
+@import &quot;framework/foundation/foundation.scss&quot;;
+
+
+//================================================//
+// MIXINS
+// mixins that can be reused across
+// rest of the scss code
+@import &quot;mixins/mx-layout.scss&quot;;
+@import &quot;mixins/mx-background.scss&quot;;
+@import &quot;mixins/mx-tint.scss&quot;;
+@import &quot;mixins/mx-border.scss&quot;;
+@import &quot;mixins/mx-type.scss&quot;;
+@import &quot;mixins/mx-utility.scss&quot;;
+
+
+//================================================//
+// GENERAL
+// general scss styles to be used
+// across all code
+@import &quot;general/type.scss&quot;;
+@import &quot;general/forms.scss&quot;;
+@import &quot;general/tables.scss&quot;;
+// @import &quot;general/print.scss&quot;;
+
+
+//================================================//
+// CLASSES
+// additional helper classes for
+// absolutlely everything
+@import &quot;classes/c-layout.scss&quot;;
+@import &quot;classes/c-background.scss&quot;;
+@import &quot;classes/c-border.scss&quot;;
+@import &quot;classes/c-type.scss&quot;;
+@import &quot;classes/c-utility.scss&quot;;
+// @import &quot;classes/c-tint.scss&quot;;
+
+
+//================================================//
+// ATOMS
+// singular html elements
+@import &quot;atoms/a-button.scss&quot;;
+@import &quot;atoms/a-type.scss&quot;;
+@import &quot;atoms/a-avatar.scss&quot;;
+
+
+//================================================//
+// MOLECULES
+// a group of atoms to form
+// a common element used
+@import &quot;molecules/m-nav.scss&quot;;
+
+
+//================================================//
+// DEVELOPMENT
+// please move all.scss code
+// into segmented file for re-use
+@import &quot;general/all.scss&quot;;
+@import &quot;general/styleguide.scss&quot;;
+ //================================================//
+// AVATAR
+// Styling to create a circular avatars.
+// status: ✅ LIVE
+// author: Thomas Kimura
+/**
+* ## Avatars
+*/
+//================================================//
+
+
+//================================================//
+/**
+* Avatar:
+* `.a-avatar`
+*
+*     @example
+*     &lt;img class=&quot;a-avatar&quot; src=&quot;https://avatars.io/instagram/&quot;/&gt;
+*/
+.a-avatar {
+  @include circular;
+  @include border-solid;
+  border-color: $v-calm;
+  height: 1.618em;
+}
+
+/**
+* Avatar:
+* `.a-avatar--2x`
+*
+*     @example
+*     &lt;img class=&quot;a-avatar--2x&quot; src=&quot;https://avatars.io/instagram/&quot;/&gt;
+*/
+.a-avatar--2x {
+  @extend .a-avatar;
+  height: 2.618em;
+}
+ //================================================//
+// BUTTONS
+// Styling to create a button element.
+// status: ✅ LIVE
+// author: Thomas Kimura
+/**
+* ## Buttons
+*/
+//================================================//
+
+
+//================================================//
+/**
+* Button:
+* `.a-button`
+*
+*     @example
+*     &lt;a class=&quot;a-button&quot;&gt;Button&lt;/a&gt;
+*     &lt;button class=&quot;a-button&quot;&gt;Button&lt;/button&gt;
+*/
+.a-button {
+  margin-right: .5rem;
+  transition: box-shadow .3s cubic-bezier(.8, .43, 0, .48);
+  border-color: $v-dark;
+
+  @include border-solid;
+  @include tx-weight-900;
+  @include padding-1;
+  @include cursor-pointer;
+  @include display-inlineblock;
+  @include tx-dark;
+  @include tx-decoration-none;
+  &amp;:hover {
+    opacity: 1;
+    box-shadow: $v-dark 7px 7px 0 0;
+  }
+  .fa {
+    @include float-right;
+    @include opacity-2;
+  }
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--primary`
+*
+*     @example
+*     &lt;a class=&quot;a-button--primary&quot;&gt;Button&lt;/a&gt;
+*     &lt;button class=&quot;a-button--primary&quot;&gt;Button&lt;/button&gt;
+*/
+.a-button--primary {
+  @extend .a-button;
+  @include tx-white;
+  @include cb-primary;
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--dark`
+*
+*     @example
+*     &lt;a class=&quot;a-button--dark&quot;&gt;Button&lt;/a&gt;
+*     &lt;button class=&quot;a-button--dark&quot;&gt;Button&lt;/button&gt;
+*/
+.a-button--dark {
+  @extend .a-button;
+  @include tx-white;
+  @include cb-dark;
+
+  border-color: white;
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--invert`
+*
+*     @example
+*     &lt;div class=&quot;h-cb-dark h-padding-05&quot;&gt;
+*       &lt;a class=&quot;a-button--invert&quot;&gt;Button&lt;/a&gt;
+*       &lt;button class=&quot;a-button--invert&quot;&gt;Button&lt;/button&gt;
+*     &lt;/div&gt;
+*/
+.a-button--invert {
+  border-color: white;
+
+  @extend .a-button;
+  @include tx-white;
+  &amp;:hover {
+    opacity: 1;
+    box-shadow: white 7px 7px 0 0;
+  }
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--plain-dark`
+*
+*     @example
+*     &lt;div class=&quot;h-cb-dark h-padding-05&quot;&gt;
+*       &lt;a class=&quot;a-button--plain-dark&quot;&gt;Button&lt;/a&gt;
+*       &lt;button class=&quot;a-button--plain-dark&quot;&gt;Button&lt;/button&gt;
+*     &lt;/div&gt;
+*/
+.a-button--plain-dark {
+  border-color: transparent;
+
+  @extend .a-button;
+  @include tx-white;
+  &amp;:hover {
+    border-color: $v-cream-900;
+  }
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--clear`
+*
+*     @example
+*     &lt;a class=&quot;a-button--clear&quot;&gt;Button&lt;/a&gt;
+*     &lt;button class=&quot;a-button--clear&quot;&gt;Button&lt;/button&gt;
+*/
+.a-button--clear {
+  border: none;
+
+  @extend .a-button;
+  &amp;:hover {
+    box-shadow: none;
+    background: rgba(0,0,0,0.1);
+  }
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--small`
+*
+*     @example
+*     &lt;a class=&quot;a-button--small&quot;&gt;Button&lt;/a&gt;
+*     &lt;button class=&quot;a-button--small&quot;&gt;Button&lt;/a&gt;
+*/
+.a-button--small {
+  @extend .a-button;
+  @include padding-05;
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--chop-left`
+*
+*     @example
+*     &lt;a class=&quot;a-button--small button--chop-left&quot;&gt;Button&lt;/a&gt;
+*     &lt;button class=&quot;a-button--small button--chop-left&quot;&gt;Button&lt;/a&gt;
+*/
+.a-button--chop-left {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--nohover`
+*
+*     @example
+*     &lt;a class=&quot;a-button--nohover&quot;&gt;Button&lt;/a&gt;
+*     &lt;button class=&quot;a-button--nohover&quot;&gt;Button&lt;/button&gt;
+*/
+.a-button--nohover {
+  @extend .a-button;
+  &amp;:hover {
+    box-shadow: none !important;
+    opacity:0.8;
+  }
+}
+ //================================================//
+// BUTTONS
+// Styling to create a button element.
+// status: ✅ LIVE
+// author: Thomas Kimura
+/**
+* ## Text Styles
+*/
+//================================================//
+
+
+//================================================//
+/**
+* Subtle Text:
+* `.h-tx-subtle`
+*
+*     @example
+*     &lt;span class=&quot;h-tx-subtle&quot;&gt;Text&lt;/span&gt;
+*/
+.h-tx-subtle {
+  @include opacity-2;
+  @include tx-small;
+}
+
+//================================================//
+/**
+* Spaced Text:
+* `.h-tx-spaced`
+*
+*     @example
+*     &lt;span class=&quot;h-tx-spaced&quot;&gt;Text&lt;/span&gt;
+*/
+.h-tx-spaced {
+  @include tx-letterspacing-2;
+  @include tx-transform-uppercase;
+}
+
+//================================================//
+/**
+* Underlined Title:
+* `.h-tx-underlinedtitle`
+*
+*     @example
+*     &lt;h3 class=&quot;h-tx-underlinedtitle&quot;&gt;&lt;span&gt;TEXT&lt;/span&gt;&lt;/h3&gt;
+*/
+.h-tx-underlinedtitle {
+  @include opacity-2;
+  @include tx-transform-uppercase;
+  span {
+    @include border-solid-bottom;
+  }
+}
+ //================================================//
+// BACKGROUND
+// Helper classes used to add background
+// colours to any element.
+// status: ✅ LIVE
+// author: Thomas Kimura
+/**
+* ## Background Colours
+*/
+//================================================//
+
+
+//================================================//
+/**
+* Gradient colours:
+*
+*     @example
+*     &lt;span class=&quot;h-cb-gradient styleguide-colorblock&quot;&gt;#3f52e3 &gt; #1828a4 &gt; #1f1f3a&lt;/span&gt;
+*/
+.h-cb-gradient {
+  background: -webkit-linear-gradient(to right, #3f52e3,#1828a4,#1f1f3a);
+  background: linear-gradient(to right, #3f52e3,#1828a4,#1f1f3a);
+}
+
+
+//================================================//
+/**
+* Base colours:
+*
+*     @example
+*     &lt;span class=&quot;h-cb-white styleguide-colorblock&quot;&gt;white #fff&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-black styleguide-colorblock&quot;&gt;black #000&lt;/span&gt;
+*/
+.h-cb-white {@include cb-white;}
+.h-cb-black {@include cb-black;}
+
+
+//================================================//
+/**
+* Brand colours:
+*
+*     @example
+*     &lt;span class=&quot;h-cb-primary styleguide-colorblock&quot;&gt;primary #5e15ec&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-midnight styleguide-colorblock&quot;&gt;midnight #1f1f3a&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-calm styleguide-colorblock&quot;&gt;calm #e5e3e3&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-cream styleguide-colorblock&quot;&gt;cream #f9f7f7&lt;/span&gt;
+*/
+.h-cb-primary {@include cb-primary;}
+.h-cb-midnight {@include cb-midnight;}
+.h-cb-calm {@include cb-calm;}
+.h-cb-cream {@include cb-cream;}
+
+
+//================================================//
+/**
+* Additonal colours:
+*
+*     @example
+*     &lt;span class=&quot;h-cb-alert styleguide-colorblock&quot;&gt;alert #af3535&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-success styleguide-colorblock&quot;&gt;success #1cc374&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-warning styleguide-colorblock&quot;&gt;warning #eadc17&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-dark styleguide-colorblock&quot;&gt;dark #121121&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-light styleguide-colorblock&quot;&gt;light #f8f8f8&lt;/span&gt;
+*/
+.h-cb-alert {@include cb-alert;}
+.h-cb-success {@include cb-success;}
+.h-cb-warning {@include cb-warning;}
+.h-cb-dark {@include cb-dark;}
+.h-cb-light {@include cb-light;}
+
+
+//================================================//
+/**
+* Primary shades:
+*
+*     @example
+*     &lt;span class=&quot;h-cb-primary-50 styleguide-colorblock&quot;&gt;primary-50&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-primary-100 styleguide-colorblock&quot;&gt;primary-100&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-primary-200 styleguide-colorblock&quot;&gt;primary-200&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-primary-300 styleguide-colorblock&quot;&gt;primary-300&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-primary-400 styleguide-colorblock&quot;&gt;primary-400&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-primary-500 styleguide-colorblock&quot;&gt;primary-500&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-primary-600 styleguide-colorblock&quot;&gt;primary-600&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-primary-800 styleguide-colorblock&quot;&gt;primary-800&lt;/span&gt;
+*     &lt;span class=&quot;h-cb-primary-900 styleguide-colorblock&quot;&gt;primary-900&lt;/span&gt;
+*/
+.h-cb-primary {@include cb-primary;}
+.h-cb-primary-50 {@include cb-primary-50;}
+.h-cb-primary-100 {@include cb-primary-100;}
+.h-cb-primary-200 {@include cb-primary-200;}
+.h-cb-primary-300 {@include cb-primary-300;}
+.h-cb-primary-400 {@include cb-primary-400;}
+.h-cb-primary-500 {@include cb-primary-500;}
+.h-cb-primary-600 {@include cb-primary-600;}
+.h-cb-primary-700 {@include cb-primary-700;}
+.h-cb-primary-800 {@include cb-primary-800;}
+.h-cb-primary-900 {@include cb-primary-900;}
+
+// .h-cb-calm {@include cb-calm;}
+// .h-cb-calm-50 {@include cb-calm-50;}
+// .h-cb-calm-100 {@include cb-calm-100;}
+// .h-cb-calm-200 {@include cb-calm-200;}
+// .h-cb-calm-300 {@include cb-calm-300;}
+// .h-cb-calm-400 {@include cb-calm-400;}
+// .h-cb-calm-500 {@include cb-calm-500;}
+// .h-cb-calm-600 {@include cb-calm-600;}
+// .h-cb-calm-700 {@include cb-calm-700;}
+// .h-cb-calm-800 {@include cb-calm-800;}
+// .h-cb-calm-900 {@include cb-calm-900;}
+//
+// .h-cb-cream {@include cb-cream;}
+// .h-cb-cream-50 {@include cb-cream-50;}
+// .h-cb-cream-100 {@include cb-cream-100;}
+// .h-cb-cream-200 {@include cb-cream-200;}
+// .h-cb-cream-300 {@include cb-cream-300;}
+// .h-cb-cream-400 {@include cb-cream-400;}
+// .h-cb-cream-500 {@include cb-cream-500;}
+// .h-cb-cream-600 {@include cb-cream-600;}
+// .h-cb-cream-700 {@include cb-cream-700;}
+// .h-cb-cream-800 {@include cb-cream-800;}
+// .h-cb-cream-900 {@include cb-cream-900;}
+//
+// .h-cb-alert {@include cb-alert;}
+// .h-cb-alert-50 {@include cb-alert-50;}
+// .h-cb-alert-100 {@include cb-alert-100;}
+// .h-cb-alert-200 {@include cb-alert-200;}
+// .h-cb-alert-300 {@include cb-alert-300;}
+// .h-cb-alert-400 {@include cb-alert-400;}
+// .h-cb-alert-500 {@include cb-alert-500;}
+// .h-cb-alert-600 {@include cb-alert-600;}
+// .h-cb-alert-700 {@include cb-alert-700;}
+// .h-cb-alert-800 {@include cb-alert-800;}
+// .h-cb-alert-900 {@include cb-alert-900;}
+//
+// .h-cb-success {@include cb-success;}
+// .h-cb-success-50 {@include cb-success-50;}
+// .h-cb-success-100 {@include cb-success-100;}
+// .h-cb-success-200 {@include cb-success-200;}
+// .h-cb-success-300 {@include cb-success-300;}
+// .h-cb-success-400 {@include cb-success-400;}
+// .h-cb-success-500 {@include cb-success-500;}
+// .h-cb-success-600 {@include cb-success-600;}
+// .h-cb-success-700 {@include cb-success-700;}
+// .h-cb-success-800 {@include cb-success-800;}
+// .h-cb-success-900 {@include cb-success-900;}
+//
+// .h-cb-warning {@include cb-warning;}
+// .h-cb-warning-50 {@include cb-warning-50;}
+// .h-cb-warning-100 {@include cb-warning-100;}
+// .h-cb-warning-200 {@include cb-warning-200;}
+// .h-cb-warning-300 {@include cb-warning-300;}
+// .h-cb-warning-400 {@include cb-warning-400;}
+// .h-cb-warning-500 {@include cb-warning-500;}
+// .h-cb-warning-600 {@include cb-warning-600;}
+// .h-cb-warning-700 {@include cb-warning-700;}
+// .h-cb-warning-800 {@include cb-warning-800;}
+// .h-cb-warning-900 {@include cb-warning-900;}
+//
+// .h-cb-light {@include cb-light;}
+// .h-cb-light-50 {@include cb-light-50;}
+// .h-cb-light-100 {@include cb-light-100;}
+// .h-cb-light-200 {@include cb-light-200;}
+// .h-cb-light-300 {@include cb-light-300;}
+// .h-cb-light-400 {@include cb-light-400;}
+// .h-cb-light-500 {@include cb-light-500;}
+// .h-cb-light-600 {@include cb-light-600;}
+// .h-cb-light-700 {@include cb-light-700;}
+// .h-cb-light-800 {@include cb-light-800;}
+// .h-cb-light-900 {@include cb-light-900;}
+//
+// .h-cb-dark {@include cb-dark;}
+// .h-cb-dark-50 {@include cb-dark-50;}
+// .h-cb-dark-100 {@include cb-dark-100;}
+// .h-cb-dark-200 {@include cb-dark-200;}
+// .h-cb-dark-300 {@include cb-dark-300;}
+// .h-cb-dark-400 {@include cb-dark-400;}
+// .h-cb-dark-500 {@include cb-dark-500;}
+// .h-cb-dark-600 {@include cb-dark-600;}
+// .h-cb-dark-700 {@include cb-dark-700;}
+// .h-cb-dark-800 {@include cb-dark-800;}
+// .h-cb-dark-900 {@include cb-dark-900;}
+ //================================================//
+// BORDER
+// Helper classes used to add borders to
+// any element.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+.h-border-none {
+  @include border-none;
+}
+.h-border-wide {
+  @include border-wide;
+}
+.h-border-dashed {
+  @include border-dashed;
+}
+.h-border-dotted {
+  @include border-dotted;
+}
+.h-border-solid {
+  @include border-solid;
+}
+.h-border-solid-top {
+  @include border-solid-top;
+}
+.h-border-solid-right {
+  @include border-solid-right;
+}
+.h-border-solid-bottom {
+  @include border-solid-bottom;
+}
+.h-border-solid-left {
+  @include border-solid-left;
+}
+.h-border-color-calm {
+  border-color: $v-calm;
+}
+.h-border-color-cream {
+  border-color: $v-cream;
+}
+.h-border-color-dark {
+  border-color: $v-dark;
+}
+ //================================================//
+// LAYOUT
+// Helper classes used to apply spacing and
+// layout changes to elements.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+//================================================//
+// MISC
+//================================================//
+/**
+* Centering things:
+*
+*     @example
+*     &lt;div class=&quot;row expanded align-stretch&quot;&gt;
+*       &lt;div class=&quot;large-4 medium-4 small-12 columns&quot;&gt;
+*         &lt;div class=&quot;h-cb-calm&quot;&gt;
+*           &lt;img class=&quot;h-padding-4&quot; src=&quot;/assets/img/work/hnt_phone2.png&quot;/&gt;
+*         &lt;/div&gt;
+*       &lt;/div&gt;
+*       &lt;div class=&quot;large-8 medium-8 small-12 columns&quot;&gt;
+*         &lt;div class=&quot;h-centercontainer h-cb-calm&quot;&gt;
+*           &lt;img class=&quot;h-centercontainer--item h-padding-4&quot; src=&quot;/assets/img/work/hnt_macbook.png&quot;/&gt;
+*         &lt;/div&gt;
+*       &lt;/div&gt;
+*     &lt;/div&gt;
+*/
+@media (min-width: 900px) {
+  .h-centercontainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .h-centercontainer--item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin: auto;
+  }
+}
+
+
+//================================================//
+// FLOAT
+.h-float-right {
+  @include float-right;
+}
+.h-float-left {
+  @include float-left;
+}
+.h-float-none {
+  @include float-none;
+}
+
+
+//================================================//
+// POSITIONING
+.h-position-fixed {
+  @include position-fixed;
+}
+.h-position-absolute {
+  @include position-absolute;
+}
+.h-position-relative {
+  @include position-relative;
+}
+.h-position-static {
+  @include position-static;
+}
+.h-center-block {
+  @include center-block;
+}
+.h-full {
+  @include full;
+}
+
+
+//================================================//
+// MARGIN
+.h-margin-none {@include margin-none;}
+.h-margin-none-b {@include margin-none-b;}
+.h-margin-none-t {@include margin-none-t;}
+.h-margin-none-l {@include margin-none-l;}
+.h-margin-none-r {@include margin-none-r;}
+
+.h-margin-05 {@include margin-05;}
+.h-margin-1 {@include margin-1;}
+.h-margin-2 {@include margin-2;}
+.h-margin-3 {@include margin-3;}
+.h-margin-4 {@include margin-4;}
+.h-margin-5 {@include margin-5;}
+.h-margin-6 {@include margin-6;}
+
+.h-margin-tb05 {@include margin-tb05;}
+.h-margin-tb1 {@include margin-tb1;}
+.h-margin-tb2 {@include margin-tb2;}
+.h-margin-tb3 {@include margin-tb3;}
+.h-margin-tb4 {@include margin-tb4;}
+.h-margin-tb5 {@include margin-tb5;}
+.h-margin-tb6 {@include margin-tb6;}
+
+.h-margin-lr05 {@include margin-lr05;}
+.h-margin-lr1 {@include margin-lr1;}
+.h-margin-lr2 {@include margin-lr2;}
+.h-margin-lr3 {@include margin-lr3;}
+.h-margin-lr4 {@include margin-lr4;}
+.h-margin-lr5 {@include margin-lr5;}
+.h-margin-lr6 {@include margin-lr6;}
+
+.h-margin-t05 {@include margin-t05;}
+.h-margin-t1 {@include margin-t1;}
+.h-margin-t2 {@include margin-t2;}
+.h-margin-t3 {@include margin-t3;}
+.h-margin-t4 {@include margin-t4;}
+.h-margin-t5 {@include margin-t5;}
+.h-margin-t6 {@include margin-t6;}
+
+.h-margin-b05 {@include margin-b05;}
+.h-margin-b1 {@include margin-b1;}
+.h-margin-b2 {@include margin-b2;}
+.h-margin-b3 {@include margin-b3;}
+.h-margin-b4 {@include margin-b4;}
+.h-margin-b5 {@include margin-b5;}
+.h-margin-b6 {@include margin-b6;}
+
+
+//================================================//
+// PADDING
+.h-padding-none {@include padding-none;}
+.h-padding-none-b {@include padding-none-b;}
+.h-padding-none-t {@include padding-none-t;}
+.h-padding-none-l {@include padding-none-l;}
+.h-padding-none-r {@include padding-none-r;}
+
+.h-padding-05 {@include padding-05;}
+.h-padding-1 {@include padding-1;}
+.h-padding-2 {@include padding-2;}
+.h-padding-3 {@include padding-3;}
+.h-padding-4 {@include padding-4;}
+.h-padding-5 {@include padding-5;}
+.h-padding-6 {@include padding-6;}
+
+.h-padding-tb05 {@include padding-tb05;}
+.h-padding-tb1 {@include padding-tb1;}
+.h-padding-tb2 {@include padding-tb2;}
+.h-padding-tb3 {@include padding-tb3;}
+.h-padding-tb4 {@include padding-tb4;}
+.h-padding-tb5 {@include padding-tb5;}
+.h-padding-tb6 {@include padding-tb6;}
+
+.h-padding-lr05 {@include padding-lr05;}
+.h-padding-lr1 {@include padding-lr1;}
+.h-padding-lr2 {@include padding-lr2;}
+.h-padding-lr3 {@include padding-lr3;}
+.h-padding-lr4 {@include padding-lr4;}
+.h-padding-lr5 {@include padding-lr5;}
+.h-padding-lr6 {@include padding-lr6;}
+
+.h-padding-t05 {@include padding-t05;}
+.h-padding-t1 {@include padding-t1;}
+.h-padding-t2 {@include padding-t2;}
+.h-padding-t3 {@include padding-t3;}
+.h-padding-t4 {@include padding-t4;}
+.h-padding-t5 {@include padding-t5;}
+.h-padding-t6 {@include padding-t6;}
+
+.h-padding-b05 {@include padding-b05;}
+.h-padding-b1 {@include padding-b1;}
+.h-padding-b2 {@include padding-b2;}
+.h-padding-b3 {@include padding-b3;}
+.h-padding-b4 {@include padding-b4;}
+.h-padding-b5 {@include padding-b5;}
+.h-padding-b6 {@include padding-b6;}
+ //================================================//
+// TINT
+// Helper classes used to create a transparent
+// background colours.
+// status: 🚧 IN-PROGRESS
+// author: Thomas Kimura
+//================================================//
+
+
+//================================================//
+// HOVER
+.hover-color-tint-dark-1:hover {
+  @include color-tint-dark-1;
+}
+.hover-color-tint-dark-2:hover {
+  @include color-tint-dark-2;
+}
+.hover-color-tint-dark-3:hover {
+  @include color-tint-dark-3;
+}
+.hover-color-tint-dark-4:hover {
+  @include color-tint-dark-4;
+}
+
+.hover-color-tint-light-1:hover {
+  @include color-tint-light-1;
+}
+.hover-color-tint-light-2:hover {
+  @include color-tint-light-2;
+}
+.hover-color-tint-light-3:hover {
+  @include color-tint-light-3;
+}
+.hover-color-tint-light-4:hover {
+  @include color-tint-light-4;
+}
+
+.hover-color-tint-primary-1:hover {
+  @include color-tint-primary-1;
+}
+.hover-color-tint-primary-2:hover {
+  @include color-tint-primary-2;
+}
+.hover-color-tint-primary-3:hover {
+  @include color-tint-primary-3;
+}
+.hover-color-tint-primary-4:hover {
+  @include color-tint-primary-4;
+}
+
+
+//================================================//
+// TINT
+.color-tint-dark-1 {
+  @include color-tint-dark-1;
+}
+.color-tint-dark-2 {
+  @include color-tint-dark-2;
+}
+.color-tint-dark-3 {
+  @include color-tint-dark-3;
+}
+.color-tint-dark-4 {
+  @include color-tint-dark-4;
+}
+
+.color-tint-light-1 {
+  @include color-tint-light-1;
+}
+.color-tint-light-2 {
+  @include color-tint-light-2;
+}
+.color-tint-light-3 {
+  @include color-tint-light-3;
+}
+.color-tint-light-4 {
+  @include color-tint-light-4;
+}
+
+.color-tint-primary-1 {
+  @include color-tint-primary-1;
+}
+.color-tint-primary-2 {
+  @include color-tint-primary-2;
+}
+.color-tint-primary-3 {
+  @include color-tint-primary-3;
+}
+.color-tint-primary-4 {
+  @include color-tint-primary-4;
+}
+ //================================================//
+// TYPE
+// Helper classes used to customize text elements.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+//================================================//
+// ALIGNMENT
+.h-tx-center {
+  @include tx-center;
+}
+.h-tx-right {
+  @include tx-right;
+}
+.h-tx-justify {
+  @include tx-justify;
+}
+.h-tx-center-small {
+  @include tx-center-small;
+}
+
+
+//================================================//
+// COLOR
+// brand colours
+.h-tx-primary{ @include tx-primary; }
+.h-tx-calm{ @include tx-calm; }
+.h-tx-cream{ @include tx-cream; }
+
+// base colours
+.h-tx-alert{ @include tx-alert; }
+.h-tx-success{ @include tx-success; }
+.h-tx-warning{ @include tx-warning; }
+.h-tx-dark{ @include tx-dark; }
+.h-tx-light{ @include tx-light; }
+.h-tx-white{ @include tx-white; }
+.h-tx-black{ @include tx-black; }
+
+
+//================================================//
+// SIZE
+.h-tx-smallest {
+  @include tx-smallest;
+}
+.h-tx-smaller {
+  @include tx-smaller;
+}
+.h-tx-small {
+  @include tx-small;
+}
+.h-tx-big {
+  @include tx-big;
+}
+.h-tx-bigger {
+  @include tx-bigger;
+}
+.h-tx-biggest {
+  @include tx-biggest;
+}
+
+
+//================================================//
+// FONT WEIGHT
+.h-tx-weight-100 {
+  @include tx-weight-100;
+}
+.h-tx-weight-200 {
+  @include tx-weight-200;
+}
+.h-tx-weight-300 {
+  @include tx-weight-300;
+}
+.h-tx-weight-400 {
+  @include tx-weight-400;
+}
+.h-tx-weight-500 {
+  @include tx-weight-500;
+}
+.h-tx-weight-600 {
+  @include tx-weight-600;
+}
+.h-tx-weight-700 {
+  @include tx-weight-700;
+}
+.h-tx-weight-800 {
+  @include tx-weight-800;
+}
+.h-tx-weight-900 {
+  @include tx-weight-900;
+}
+
+
+//================================================//
+// LETTER SPACING
+.h-tx-letterspacing-1 {
+  @include tx-letterspacing-1;
+}
+.h-tx-letterspacing-2 {
+  @include tx-letterspacing-2;
+}
+.h-tx-letterspacing-3 {
+  @include tx-letterspacing-3;
+}
+
+
+//================================================//
+// LISTS
+.tx-list-none {
+  @include tx-list-none;
+}
+
+
+//================================================//
+// DECORATION
+.h-tx-decoration-none {
+  @include tx-decoration-none;
+}
+.h-tx-decoration-strike {
+  @include tx-decoration-strike
+}
+.h-tx-decoration-underline {
+  @include tx-decoration-underline
+}
+
+
+//================================================//
+// TRANSFORM
+.h-tx-transform-uppercase {
+  @include tx-transform-uppercase;
+}
+
+
+//================================================//
+// FAMILY
+.h-tx-family-header {
+  @include tx-family-header;
+}
+.h-tx-family-default {
+  @include tx-family-default;
+}
+.h-tx-family-serif {
+  @include tx-family-serif;
+}
+ //================================================//
+// UTILITY
+// Additonal helper classes to help style elements.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+//================================================//
+// CORNERS
+.h-rounded {
+  @include rounded;
+}
+.h-circular {
+  @include circular;
+}
+
+
+//================================================//
+// VISBILITY
+.h-display-none {
+  @include display-none;
+}
+.h-display-inline {
+  @include display-inline;
+}
+.h-display-inlineblock {
+  @include display-inlineblock;
+}
+.h-display-block {
+  @include display-block;
+}
+.h-display-initial {
+  @include display-initial;
+}
+.h-display-print-none {
+  @include display-print-none;
+}
+.h-mobile-only {
+  @include mobile-only;
+}
+.h-desktop-only {
+  @include desktop-only;
+}
+.h-tablet-up {
+  @include tablet-up;
+}
+.h-tablet-down {
+  @include tablet-down;
+}
+
+
+//================================================//
+// OVERFLOW
+.h-overflow-hidden {
+  @include overflow-hidden;
+}
+.h-overflow-ellipsis {
+  @include overflow-ellipsis;
+}
+
+
+//================================================//
+// Z-INDEX
+.h-zindex-n10 {
+  @include zindex-n10;
+}
+.h-zindex-n1 {
+  @include zindex-n1;
+}
+.h-zindex-1 {
+  @include zindex-1;
+}
+.h-zindex-10 {
+  @include zindex-10;
+}
+.h-zindex-100 {
+  @include zindex-100;
+}
+.h-zindex-1000 {
+  @include zindex-1000;
+}
+
+
+//================================================//
+// OPACITY
+.h-opacity-full {
+  @include opacity-full;
+}
+.h-opacity-0 {
+  @include opacity-0;
+}
+.h-opacity-1 {
+  @include opacity-1;
+}
+.h-opacity-2 {
+  @include opacity-2;
+}
+.h-opacity-3 {
+  @include opacity-3;
+}
+.h-opacity-4 {
+  @include opacity-4;
+}
+
+
+//================================================//
+// CURSOR
+.h-cursor-pointer {
+  @include cursor-pointer;
+}
+ //================================================//
+// ALL
+// Temporary code that should be split into
+// modular files.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+.inlinelogo {
+  display: inline;
+  height: 2rem;
+  vertical-align: middle;
+}
+.inlinelogo--small {
+  display: inline;
+  height: 1.5rem;
+  vertical-align: middle;
+}
+.inlinelogotype--small {
+  height: 14px;
+}
+
+
+.fa {
+  line-height: 1.618 !important;
+  vertical-align: middle;
+}
+
+
+img.emoji {
+  width: 1em;
+  height: 1em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -.1em;
+}
+
+
+.paginate {
+  @include tx-weight-900;
+  @include tx-big;
+  a {
+    @include tx-dark;
+  }
+}
+ //================================================//
+// FORM
+// Basic styleing for all standard form.
+// and input elements.
+// status: ✅ LIVE
+// author: Thomas Kimura
+/**
+* ## Form Elements
+*/
+//================================================//
+
+
+fieldset {
+  border: none;
+
+  @include padding-1;
+}
+
+//================================================//
+/**
+* Input:
+*
+*     @example
+*     &lt;input type=&quot;text&quot; placeholder=&quot;Your name&quot;/&gt;
+*/
+input,
+button {
+  line-height: 1.618;
+}
+
+
+//================================================//
+/**
+* Textarea:
+*
+*     @example
+*     &lt;textarea type=&quot;text&quot; placeholder=&quot;Your name&quot;&gt;&lt;/textarea&gt;
+*/
+//================================================//
+/**
+* Select:
+*
+*     @example
+*     &lt;select&gt;
+*       &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+*       &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+*       &lt;option value=&quot;mercedes&quot;&gt;Mercedes&lt;/option&gt;
+*       &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+*     &lt;/select&gt;
+*/
+input,
+textarea,
+select,
+button {
+  font-size: 1em;
+  max-width: 100%;
+  padding: .5rem !important;
+  border: $v-size-border-width solid $v-calm;
+  outline: none;
+
+  @include padding-05;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type=text],
+input[type=number],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=month],
+input[type=week],
+input[type=email],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+textarea,
+select {
+  background: $v-calm-300;
+  &amp;:hover {
+    border-color: $v-calm-700;
+    background: $v-calm-400;
+  }
+  &amp;:focus {
+    border-color: $v-primary;
+    background: $v-calm-400;
+  }
+}
+
+.input-chop-right {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+ //================================================//
+// PRINT
+// Basic styles to apply when printing pages.
+// status: ✅ LIVE
+// author: Thomas Kimura
+/**
+* ## Print Styles
+*/
+//================================================//
+
+
+@media all {
+  .pr-page-break {
+    display: none;
+  }
+}
+
+@page {
+  size: A4;
+}
+
+@page {
+  @top-right {
+    content: 'Page ' counter(page) ' of ' counter(pages);
+  }
+}
+
+@page :right {
+  @top-right {
+    font-size: 8pt;
+    margin: 30pt 0 10pt 0;
+    content: string(doctitle);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
+
+  page-break-after: avoid;
+  page-break-inside: avoid;
+}
+
+h1 + p,
+h2 + p,
+h3 + p {
+  page-break-before: avoid;
+}
+
+@media print {
+  body {
+    font-size: .8em;
+  }
+
+  //================================================//
+  /**
+  * Page break:
+  * `.pr-page-break`
+  *
+  *     @example
+  *     &lt;br class=&quot;pr-page-break&quot;/&gt;
+  */
+  .pr-page-break {
+    display: block;
+
+    page-break-before: always;
+  }
+}
+ //================================================//
+// STYLEGUIDE
+// Styles that apply to the auto generated
+// styleguide.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+.styleguide-colorblock {
+  @include display-inlineblock;
+  @include padding-05;
+  @include margin-b1;
+  border: 1px $v-dark solid;
+  border-radius: $v-size-radius;
+}
+ //================================================//
+// TABLES
+// Basic styles to apply for tables.
+// status: ✅ LIVE
+// author: Thomas Kimura
+/**
+* ## Tables
+*/
+//================================================//
+
+
+//================================================//
+/**
+* Table:
+*
+*     @example
+*     &lt;table style=&quot;width:100%&quot;&gt;
+*       &lt;tr&gt;
+*         &lt;th&gt;Firstname&lt;/th&gt;
+*         &lt;th&gt;Lastname&lt;/th&gt;
+*         &lt;th&gt;Age&lt;/th&gt;
+*       &lt;/tr&gt;
+*       &lt;tr&gt;
+*         &lt;td&gt;Jill&lt;/td&gt;
+*         &lt;td&gt;Smith&lt;/td&gt;
+*         &lt;td&gt;50&lt;/td&gt;
+*       &lt;/tr&gt;
+*       &lt;tr&gt;
+*         &lt;td&gt;Eve&lt;/td&gt;
+*         &lt;td&gt;Jackson&lt;/td&gt;
+*         &lt;td&gt;94&lt;/td&gt;
+*       &lt;/tr&gt;
+*     &lt;/table&gt;
+*/
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+table tr {
+  border-bottom: solid 1px $v-calm;
+  &amp;:hover {
+    border-bottom: solid 1px $v-color-text-body;
+    background: $v-cream;
+  }
+}
+
+table td {
+  vertical-align: middle;
+  border-left: solid 1px $v-calm;
+
+  @include padding-tb05;
+  @include padding-lr05;
+}
+
+table th {
+  text-align: left;
+  border-left: solid 1px $v-calm;
+
+  @include padding-tb05;
+  @include padding-lr05;
+}
+
+tr td:last-child,
+tr th:last-child {
+  border-right: solid 1px $v-calm;
+}
+
+.table-nohover {
+  &amp;:hover {
+    background: transparent;
+  }
+}
+.table-noborder td {
+  border-bottom: none;
+}
+ //================================================//
+// TYPE
+// Basic styleing for all standard typographic
+// elements.
+// status: ✅ LIVE
+// author: Thomas Kimura
+/**
+* ## Text Elements
+*/
+//================================================//
+
+
+body {
+  font-family: $v-font-default;
+  font-size: $v-size-base-mobile;
+  line-height: $v-size-lineheight-body;
+  word-wrap: break-word;
+  color: $v-color-text-body;
+  @media (min-width: 500px) {
+    font-size: $v-size-base-tablet;
+  }
+  @media (min-width: 900px) {
+    font-size: $v-size-base-desktop;
+  }
+}
+
+
+//================================================//
+/**
+* Paragraphs:
+*
+*     @example
+*     &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+*/
+
+//================================================//
+/**
+* Lists:
+*
+*     @example
+*     &lt;ul&gt;
+*       &lt;li&gt;Item one&lt;/li&gt;
+*       &lt;li&gt;Item two&lt;/li&gt;
+*       &lt;li&gt;Item three&lt;/li&gt;
+*     &lt;/ul&gt;
+*     &lt;ol&gt;
+*       &lt;li&gt;Item one&lt;/li&gt;
+*       &lt;li&gt;Item two&lt;/li&gt;
+*       &lt;li&gt;Item three&lt;/li&gt;
+*     &lt;/ol&gt;
+*/
+p,
+li,
+blockquote,
+pre,
+input,
+a {
+  line-height: $v-size-lineheight-body;
+}
+
+
+//================================================//
+/**
+* Links:
+*
+*     @example
+*     &lt;p&gt;
+*       Here is a &lt;a href=&quot;&quot;&gt;link&lt;/a&gt;.
+*     &lt;/p&gt;
+*/
+a {
+  color: $v-primary;
+  &amp;:hover {
+    @include opacity-3;
+  }
+  &amp;:active {
+    @include opacity-4;
+  }
+}
+
+
+//================================================//
+/**
+* Headers:
+*
+*     @example
+*     &lt;h1&gt;Aa Header Text&lt;/h1&gt;
+*     &lt;h2&gt;Aa Header Text&lt;/h2&gt;
+*     &lt;h3&gt;Aa Header Text&lt;/h3&gt;
+*     &lt;h4&gt;Aa Header Text&lt;/h4&gt;
+*     &lt;h5&gt;Aa Header Text&lt;/h5&gt;
+*     &lt;h6&gt;Aa Header Text&lt;/h6&gt;
+*/
+h1 {
+  font-family: $v-font-header;
+  line-height: $v-size-lineheight-header;
+  color: $v-color-text-header;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $v-font-default;
+  line-height: $v-size-lineheight-header;
+  color: $v-color-text-header;
+}
+h5,
+h6 {
+  @include opacity-1;
+}
+
+h1 {
+  font-size: $v-size-mobile-h1;
+  @media (min-width: 500px) {
+    font-size: $v-size-tablet-h1;
+  }
+  @media (min-width: 900px) {
+    font-size: $v-size-desktop-h1;
+  }
+}
+
+
+h2 {
+  font-size: $v-size-mobile-h2;
+  @media (min-width: 500px) {
+    font-size: $v-size-tablet-h2;
+  }
+  @media (min-width: 900px) {
+    font-size: $v-size-desktop-h2;
+  }
+}
+
+
+h3 {
+  font-size: $v-size-mobile-h3;
+  @media (min-width: 500px) {
+    font-size: $v-size-tablet-h3;
+  }
+  @media (min-width: 900px) {
+    font-size: $v-size-desktop-h3;
+  }
+}
+
+
+h4 {
+  font-size: $v-size-mobile-h4;
+  @media (min-width: 500px) {
+    font-size: $v-size-tablet-h4;
+  }
+  @media (min-width: 900px) {
+    font-size: $v-size-desktop-h4;
+  }
+}
+
+
+h5 {
+  font-size: $v-size-mobile-h5;
+  @media (min-width: 500px) {
+    font-size: $v-size-tablet-h5;
+  }
+  @media (min-width: 900px) {
+    font-size: $v-size-desktop-h5;
+  }
+}
+
+
+h6 {
+  font-size: $v-size-mobile-h6;
+  @media (min-width: 500px) {
+    font-size: $v-size-tablet-h6;
+  }
+  @media (min-width: 900px) {
+    font-size: $v-size-desktop-h6;
+  }
+}
+
+
+//================================================//
+// ADDITONAL ELEMENTS
+//================================================//
+/**
+* Blockquotes:
+*
+*     @example
+*     &lt;blockquote cite=&quot;www.google.com&quot;&gt;Here we can display a blockquote
+*       &lt;cite&gt;Google.com&lt;/cite&gt;
+*     &lt;/blockquote&gt;
+*/
+blockquote {
+  border-left: solid 5px $v-light-700;
+
+  @include margin-none-l;
+  @include padding-1;
+  cite {
+    @include opacity-2;
+  }
+}
+
+dd {
+  margin-left: 0;
+}
+
+
+//================================================//
+/**
+* Keyboard:
+*
+*     @example
+*     &lt;kbd&gt;
+*       alt
+*     &lt;/kbd&gt;
+*/
+kbd {
+  font-size: .8em;
+  padding: 4px;
+  white-space: nowrap;
+  border: 1px solid $v-light-600;
+  border-radius: $v-size-radius;
+  background: $v-light;
+  box-shadow: 0 2px 0 $v-light-600,0 0 0 3px rgba(255, 255, 255, .8) inset;
+}
+
+::selection {
+  color: $color-text-i-body;
+  background: $v-primary;
+}
+
+::-moz-selection {
+  color: $color-text-i-body;
+  background: $v-primary;
+}
+ //================================================//
+// BACKGROUND
+// Mixins that are used to apply different colours
+// to HTML elements.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+@mixin cb-white {background: white;}
+@mixin cb-black {background: black;}
+
+
+// brand colours
+@mixin cb-primary {
+  background: $v-primary;
+  border-color: $v-primary;
+}
+@mixin cb-midnight {
+  background: $v-midnight;
+  border-color: $v-midnight;
+}
+@mixin cb-calm {
+  background: $v-calm;
+  border-color: $v-calm;
+}
+@mixin cb-cream {
+  background: $v-cream;
+  border-color: $v-cream;
+}
+
+
+// base
+@mixin cb-alert {
+  background: $v-alert;
+  border-color: $v-alert;
+}
+@mixin cb-success {
+  background: $v-success;
+  border-color: $v-success;
+}
+@mixin cb-warning {
+  background: $v-warning;
+  border-color: $v-warning;
+}
+@mixin cb-dark {
+  background: $v-dark;
+  border-color: $v-dark;
+}
+@mixin cb-light {
+  background: $v-light;
+  border-color: $v-light;
+}
+
+
+@mixin cb-primary-50 {background: $v-primary-100;}
+@mixin cb-primary-100 {background: $v-primary-100;}
+@mixin cb-primary-200 {background: $v-primary-200;}
+@mixin cb-primary-300 {background: $v-primary-300;}
+@mixin cb-primary-400 {background: $v-primary-400;}
+@mixin cb-primary-500 {background: $v-primary-500;}
+@mixin cb-primary-600 {background: $v-primary-600;}
+@mixin cb-primary-700 {background: $v-primary-700;}
+@mixin cb-primary-800 {background: $v-primary-800;}
+@mixin cb-primary-900 {background: $v-primary-900;}
+
+@mixin cb-calm-50 {background: $v-calm-100;}
+@mixin cb-calm-100 {background: $v-calm-100;}
+@mixin cb-calm-200 {background: $v-calm-200;}
+@mixin cb-calm-300 {background: $v-calm-300;}
+@mixin cb-calm-400 {background: $v-calm-400;}
+@mixin cb-calm-500 {background: $v-calm-500;}
+@mixin cb-calm-600 {background: $v-calm-600;}
+@mixin cb-calm-700 {background: $v-calm-700;}
+@mixin cb-calm-800 {background: $v-calm-800;}
+@mixin cb-calm-900 {background: $v-calm-900;}
+
+@mixin cb-cream-50 {background: $v-cream-100;}
+@mixin cb-cream-100 {background: $v-cream-100;}
+@mixin cb-cream-200 {background: $v-cream-200;}
+@mixin cb-cream-300 {background: $v-cream-300;}
+@mixin cb-cream-400 {background: $v-cream-400;}
+@mixin cb-cream-500 {background: $v-cream-500;}
+@mixin cb-cream-600 {background: $v-cream-600;}
+@mixin cb-cream-700 {background: $v-cream-700;}
+@mixin cb-cream-800 {background: $v-cream-800;}
+@mixin cb-cream-900 {background: $v-cream-900;}
+
+@mixin cb-alert-50 {background: $v-alert-100;}
+@mixin cb-alert-100 {background: $v-alert-100;}
+@mixin cb-alert-200 {background: $v-alert-200;}
+@mixin cb-alert-300 {background: $v-alert-300;}
+@mixin cb-alert-400 {background: $v-alert-400;}
+@mixin cb-alert-500 {background: $v-alert-500;}
+@mixin cb-alert-600 {background: $v-alert-600;}
+@mixin cb-alert-700 {background: $v-alert-700;}
+@mixin cb-alert-800 {background: $v-alert-800;}
+@mixin cb-alert-900 {background: $v-alert-900;}
+
+@mixin cb-success-50 {background: $v-success-100;}
+@mixin cb-success-100 {background: $v-success-100;}
+@mixin cb-success-200 {background: $v-success-200;}
+@mixin cb-success-300 {background: $v-success-300;}
+@mixin cb-success-400 {background: $v-success-400;}
+@mixin cb-success-500 {background: $v-success-500;}
+@mixin cb-success-600 {background: $v-success-600;}
+@mixin cb-success-700 {background: $v-success-700;}
+@mixin cb-success-800 {background: $v-success-800;}
+@mixin cb-success-900 {background: $v-success-900;}
+
+@mixin cb-warning-50 {background: $v-warning-100;}
+@mixin cb-warning-100 {background: $v-warning-100;}
+@mixin cb-warning-200 {background: $v-warning-200;}
+@mixin cb-warning-300 {background: $v-warning-300;}
+@mixin cb-warning-400 {background: $v-warning-400;}
+@mixin cb-warning-500 {background: $v-warning-500;}
+@mixin cb-warning-600 {background: $v-warning-600;}
+@mixin cb-warning-700 {background: $v-warning-700;}
+@mixin cb-warning-800 {background: $v-warning-800;}
+@mixin cb-warning-900 {background: $v-warning-900;}
+
+@mixin cb-dark-50 {background: $v-dark-100;}
+@mixin cb-dark-100 {background: $v-dark-100;}
+@mixin cb-dark-200 {background: $v-dark-200;}
+@mixin cb-dark-300 {background: $v-dark-300;}
+@mixin cb-dark-400 {background: $v-dark-400;}
+@mixin cb-dark-500 {background: $v-dark-500;}
+@mixin cb-dark-600 {background: $v-dark-600;}
+@mixin cb-dark-700 {background: $v-dark-700;}
+@mixin cb-dark-800 {background: $v-dark-800;}
+@mixin cb-dark-900 {background: $v-dark-900;}
+
+@mixin cb-light-50 {background: $v-light-50;}
+@mixin cb-light-100 {background: $v-light-100;}
+@mixin cb-light-200 {background: $v-light-200;}
+@mixin cb-light-300 {background: $v-light-300;}
+@mixin cb-light-400 {background: $v-light-400;}
+@mixin cb-light-500 {background: $v-light-500;}
+@mixin cb-light-600 {background: $v-light-600;}
+@mixin cb-light-700 {background: $v-light-700;}
+@mixin cb-light-800 {background: $v-light-800;}
+@mixin cb-light-900 {background: $v-light-900;}
+ //================================================//
+// BORDER
+// Mixins that are used to add borders.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+@mixin border-none {
+  border: none;
+}
+@mixin border-wide {
+  border: solid 5px;
+}
+@mixin border-dashed {
+  border-width: $v-size-border-width;
+  border-style: dashed;
+}
+@mixin border-dotted {
+  border-width: $v-size-border-width;
+  border-style: dotted;
+}
+@mixin border-solid {
+  border-width: $v-size-border-width;
+  border-style: solid;
+}
+@mixin border-solid-top {
+  border-top: $v-size-border-width solid;
+}
+@mixin border-solid-right {
+  border-right: $v-size-border-width solid;
+}
+@mixin border-solid-bottom {
+  border-bottom: $v-size-border-width solid;
+}
+@mixin border-solid-left {
+  border-left: $v-size-border-width solid;
+}
+ //================================================//
+// LAYOUT
+// Mixins that are used to apply spacing and layout
+// changes to elements.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+//================================================//
+// FLOAT
+@mixin float-left {
+  float: left;
+}
+@mixin float-right {
+  float: right;
+}
+@mixin float-none {
+  float: none;
+}
+
+
+//================================================//
+// POSITIONING
+@mixin position-fixed {
+  position: fixed;
+}
+@mixin position-absolute {
+  position: absolute;
+}
+@mixin position-relative {
+  position: relative;
+}
+@mixin position-static {
+  position: static;
+}
+@mixin center-block {
+  display: block;
+  margin: 0 auto;
+}
+@mixin full {
+  display: block;
+  width: 100%;
+}
+
+
+//================================================//
+// MARGINS
+
+// clear margin
+@mixin margin-none {
+  margin: 0 !important;
+}
+@mixin margin-none-b {
+  margin-bottom: 0 !important;
+}
+@mixin margin-none-l {
+  margin-left: 0 !important;
+}
+@mixin margin-none-r {
+  margin-right: 0 !important;
+}
+@mixin margin-none-t {
+  margin-top: 0 !important;
+}
+
+// full margin
+@mixin margin-05 {
+  margin: .5em;
+}
+@mixin margin-1 {
+  margin: 1em;
+}
+@mixin margin-2 {
+  margin: 2em;
+}
+@mixin margin-3 {
+  margin: 3em;
+}
+@mixin margin-4 {
+  margin: 4em;
+}
+@mixin margin-5 {
+  margin: 5em;
+}
+@mixin margin-6 {
+  margin: 6em;
+}
+
+// top and bottom margin
+@mixin margin-tb05 {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+@mixin margin-tb1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+@mixin margin-tb2 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+@mixin margin-tb3 {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+@mixin margin-tb4 {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+@mixin margin-tb5 {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+@mixin margin-tb6 {
+  margin-top: 6em;
+  margin-bottom: 6em;
+}
+
+// left and right margin
+@mixin margin-lr05 {
+  margin-right: .5em;
+  margin-left: .5em;
+}
+@mixin margin-lr1 {
+  margin-right: 1em;
+  margin-left: 1em;
+}
+@mixin margin-lr2 {
+  margin-right: 2em;
+  margin-left: 2em;
+}
+@mixin margin-lr3 {
+  margin-right: 3em;
+  margin-left: 3em;
+}
+@mixin margin-lr4 {
+  margin-right: 4em;
+  margin-left: 4em;
+}
+@mixin margin-lr5 {
+  margin-right: 5em;
+  margin-left: 5em;
+}
+@mixin margin-lr6 {
+  margin-right: 6em;
+  margin-left: 6em;
+}
+
+// top only margin
+@mixin margin-t05 {
+  margin-top: .5em;
+}
+@mixin margin-t1 {
+  margin-top: 1em;
+}
+@mixin margin-t2 {
+  margin-top: 2em;
+}
+@mixin margin-t3 {
+  margin-top: 3em;
+}
+@mixin margin-t4 {
+  margin-top: 4em;
+}
+@mixin margin-t5 {
+  margin-top: 5em;
+}
+@mixin margin-t6 {
+  margin-top: 6em;
+}
+
+// bottom only margin
+@mixin margin-b05 {
+  margin-bottom: .5em;
+}
+@mixin margin-b1 {
+  margin-bottom: 1em;
+}
+@mixin margin-b2 {
+  margin-bottom: 2em;
+}
+@mixin margin-b3 {
+  margin-bottom: 3em;
+}
+@mixin margin-b4 {
+  margin-bottom: 4em;
+}
+@mixin margin-b5 {
+  margin-bottom: 5em;
+}
+@mixin margin-b6 {
+  margin-bottom: 6em;
+}
+
+
+//================================================//
+// PADDINGS
+
+// clear margin
+@mixin padding-none {
+  padding: 0;
+}
+@mixin padding-none-b {
+  padding-bottom: 0;
+}
+@mixin padding-none-l {
+  padding-left: 0;
+}
+@mixin padding-none-r {
+  padding-right: 0;
+}
+@mixin padding-none-t {
+  padding-top: 0;
+}
+
+// full padding
+@mixin padding-05 {
+  padding: .5em;
+}
+@mixin padding-1 {
+  padding: 1em;
+}
+@mixin padding-2 {
+  padding: 2em;
+}
+@mixin padding-3 {
+  padding: 3em;
+}
+@mixin padding-4 {
+  padding: 4em;
+}
+@mixin padding-5 {
+  padding: 5em;
+}
+@mixin padding-6 {
+  padding: 6em;
+}
+
+// top and bottom padding
+@mixin padding-tb05 {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+@mixin padding-tb1 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+@mixin padding-tb2 {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+@mixin padding-tb3 {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+@mixin padding-tb4 {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+@mixin padding-tb5 {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+@mixin padding-tb6 {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+// left and right padding
+@mixin padding-lr05 {
+  padding-right: .5em;
+  padding-left: .5em;
+}
+@mixin padding-lr1 {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+@mixin padding-lr2 {
+  padding-right: 2em;
+  padding-left: 2em;
+}
+@mixin padding-lr3 {
+  padding-right: 3em;
+  padding-left: 3em;
+}
+@mixin padding-lr4 {
+  padding-right: 4em;
+  padding-left: 4em;
+}
+@mixin padding-lr5 {
+  padding-right: 5em;
+  padding-left: 5em;
+}
+@mixin padding-lr6 {
+  padding-right: 6em;
+  padding-left: 6em;
+}
+
+// top only padding
+@mixin padding-t05 {
+  padding-top: .5em;
+}
+@mixin padding-t1 {
+  padding-top: 1em;
+}
+@mixin padding-t2 {
+  padding-top: 2em;
+}
+@mixin padding-t3 {
+  padding-top: 3em;
+}
+@mixin padding-t4 {
+  padding-top: 4em;
+}
+@mixin padding-t5 {
+  padding-top: 5em;
+}
+@mixin padding-t6 {
+  padding-top: 6em;
+}
+
+// bottom only padding
+@mixin padding-b05 {
+  padding-bottom: .5em;
+}
+@mixin padding-b1 {
+  padding-bottom: 1em;
+}
+@mixin padding-b2 {
+  padding-bottom: 2em;
+}
+@mixin padding-b3 {
+  padding-bottom: 3em;
+}
+@mixin padding-b4 {
+  padding-bottom: 4em;
+}
+@mixin padding-b5 {
+  padding-bottom: 5em;
+}
+@mixin padding-b6 {
+  padding-bottom: 6em;
+}
+ //================================================//
+// TINT
+// Mixins that are used to apply transparent
+// background colours.
+// status: 🚧 IN-PROGRESS
+// author: Thomas Kimura
+//================================================//
+
+
+@mixin color-tint-dark-1 {
+  background: transparentize($dark, .9);
+}
+@mixin color-tint-dark-2 {
+  background: transparentize($dark, .7);
+}
+@mixin color-tint-dark-3 {
+  background: transparentize($dark, .5);
+}
+@mixin color-tint-dark-4 {
+  background: transparentize($dark, .3);
+}
+
+@mixin color-tint-light-1 {
+  background: transparentize($v-light, .9);
+}
+@mixin color-tint-light-2 {
+  background: transparentize($v-light, .7);
+}
+@mixin color-tint-light-3 {
+  background: transparentize($v-light, .5);
+}
+@mixin color-tint-light-4 {
+  background: transparentize($v-light, .3);
+}
+
+@mixin color-tint-primary-1 {
+  background: transparentize($v-primary, .9);
+}
+@mixin color-tint-primary-2 {
+  background: transparentize($v-primary, .7);
+}
+@mixin color-tint-primary-3 {
+  background: transparentize($v-primary, .5);
+}
+@mixin color-tint-primary-4 {
+  background: transparentize($v-primary, .3);
+}
+ //================================================//
+// TYPE
+// Mixins that are used to apply styling to text.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+//================================================//
+// ALIGNMENT
+@mixin tx-center {
+  text-align: center;
+}
+@mixin tx-right {
+  text-align: right;
+}
+@mixin tx-justify {
+  text-align: justify;
+}
+@mixin tx-center-small {
+  @media (max-width: 600px) {
+    text-align: center;
+  }
+}
+
+
+//================================================//
+// COLOR
+
+// brand colours
+@mixin tx-primary {
+  color: $v-primary;
+}
+@mixin tx-calm {
+  color: $v-calm;
+}
+@mixin tx-cream {
+  color: $v-cream;
+}
+
+// base colours
+@mixin tx-alert {
+  color: $v-alert;
+}
+@mixin tx-success {
+  color: $v-success;
+}
+@mixin tx-warning {
+  color: $v-warning;
+}
+@mixin tx-dark {
+  color: $v-dark;
+}
+@mixin tx-light {
+  color: $v-light;
+}
+@mixin tx-white {
+  color: white;
+}
+@mixin tx-black {
+  color: black;
+}
+
+
+//================================================//
+// SIZE
+@mixin tx-smallest {
+  font-size: .4em;
+  line-height: $v-size-lineheight-body;
+}
+@mixin tx-smaller {
+  font-size: .6em;
+  line-height: $v-size-lineheight-body;
+}
+@mixin tx-small {
+  font-size: .8em;
+  line-height: $v-size-lineheight-body;
+}
+@mixin tx-big {
+  font-size: 1.2em;
+  line-height: $v-size-lineheight-body;
+}
+@mixin tx-bigger {
+  font-size: 1.6em;
+  line-height: $v-size-lineheight-body;
+}
+@mixin tx-biggest {
+  font-size: 2em;
+  line-height: $v-size-lineheight-body;
+}
+
+
+//================================================//
+// FONT WEIGHT
+@mixin tx-weight-100 {
+  font-weight: 100;
+}
+@mixin tx-weight-200 {
+  font-weight: 200;
+}
+@mixin tx-weight-300 {
+  font-weight: 300;
+}
+@mixin tx-weight-400 {
+  font-weight: 400;
+}
+@mixin tx-weight-500 {
+  font-weight: 500;
+}
+@mixin tx-weight-600 {
+  font-weight: 600;
+}
+@mixin tx-weight-700 {
+  font-weight: 700;
+}
+@mixin tx-weight-800 {
+  font-weight: 800;
+}
+@mixin tx-weight-900 {
+  font-weight: 900;
+}
+
+
+//================================================//
+// LETTER SPACING
+@mixin tx-letterspacing-1 {
+  letter-spacing: 1px;
+}
+@mixin tx-letterspacing-2 {
+  letter-spacing: 2px;
+}
+@mixin tx-letterspacing-3 {
+  letter-spacing: 5px;
+}
+
+
+//================================================//
+// LISTS
+@mixin tx-list-none {
+  list-style: none;
+}
+
+
+
+//================================================//
+// DECORATION
+@mixin tx-decoration-none {
+  text-decoration: none;
+}
+@mixin tx-decoration-strike {
+  text-decoration: line-through;
+}
+@mixin tx-decoration-underline {
+  text-decoration: underline;
+}
+
+//================================================//
+// TRANSFORM
+@mixin tx-transform-uppercase {
+  text-transform: uppercase;
+}
+
+
+//================================================//
+// FAMILY
+@mixin tx-family-header {
+  font-family: $v-font-header;
+}
+@mixin tx-family-default {
+  font-family: $v-font-default;
+}
+@mixin tx-family-serif {
+  font-family: $v-font-serif;
+}
+ //================================================//
+// UTILITY
+// Additional mixins to help style elements.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+//================================================//
+// CORNERS
+@mixin rounded {
+  border-radius: $v-size-radius;
+}
+@mixin circular {
+  border-radius: 50%;
+}
+
+
+//================================================//
+// VISBILITY
+@mixin display-none {
+  display: none !important;
+}
+@mixin display-inline {
+  display: inline;
+}
+@mixin display-block {
+  display: block;
+}
+@mixin display-initial {
+  display: initial;
+}
+@mixin display-inlineblock {
+  display: inline-block;
+}
+@mixin display-print-none {
+  @media print {
+    display: none;
+  }
+}
+@mixin mobile-only {
+  @media (min-width: 600px) {
+    display: none !important;
+  }
+}
+@mixin desktop-only {
+  @media (max-width: 900px) {
+    display: none !important;
+  }
+}
+@mixin tablet-up {
+  @media (max-width: 600px) {
+    display: none !important;
+  }
+}
+@mixin tablet-down {
+  @media (min-width: 900px) {
+    display: none !important;
+  }
+}
+
+
+//================================================//
+// OVERFLOW
+@mixin overflow-hidden {
+  overflow: hidden;
+}
+@mixin overflow-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+//================================================//
+// Z-INDEX
+@mixin zindex-n10 {
+  z-index: -10;
+}
+@mixin zindex-n1 {
+  z-index: -1;
+}
+@mixin zindex-1 {
+  z-index: 1;
+}
+@mixin zindex-10 {
+  z-index: 10;
+}
+@mixin zindex-100 {
+  z-index: 100;
+}
+@mixin zindex-1000 {
+  z-index: 1000;
+}
+
+
+//================================================//
+// OPACITY
+@mixin opacity-full {
+  opacity: 1;
+}
+@mixin opacity-0 {
+  opacity: 0;
+}
+@mixin opacity-1 {
+  opacity: .8;
+}
+@mixin opacity-2 {
+  opacity: .6;
+}
+@mixin opacity-3 {
+  opacity: .4;
+}
+@mixin opacity-4 {
+  opacity: .2;
+}
+
+
+//================================================//
+// CURSOR
+@mixin cursor-pointer {
+  cursor: pointer;
+}
+
+
+//================================================//
+// SHADOW
+@mixin shadow-bottom {
+  box-shadow: 0 1px 5px $dark-50;
+}
+ //================================================//
+// NAV
+// Styling to the navigation component
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+.m-navpage__bar {
+  @include full;
+  @include zindex-1000;
+  @include position-fixed;
+  @include border-solid-bottom;
+
+  border-color: $v-dark;
+  .row {
+    @include padding-tb1;
+  }
+  h1 {
+    @include margin-none;
+    @include tx-bigger;
+  }
+  a {
+    line-height: $v-size-lineheight-header;
+
+    @include tx-decoration-none;
+  }
+}
+
+.m-navpage__menu {
+  @include border-solid-left;
+  position: fixed;
+  z-index: 2001;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  width: 450px;
+  max-width: 100%;
+  height: 100%;
+  transition-timing-function: cubic-bezier(.8,.43,0,.48);
+  transition-duration: .2s;
+  transition-property: transform;
+  transform: translateX(100%);
+  border-color: $v-calm;
+}
+
+.m-navpage__menu--visible {
+  cursor: default;
+  transform: translateX(0%);
+}
+
+.m-navpage__container {
+  z-index: 2000;
+  transition-timing-function: cubic-bezier(.8,.43,0,.48);
+  transition-duration: .2s;
+  transition-property: opacity;
+  opacity: 0;
+
+  @include position-fixed;
+}
+
+.m-navpage__container--visible {
+  z-index: 2000;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: e-resize;
+  opacity: 1;
+  background: rgba(0,0,0,.8);
+}
+ //================================================//
+// COLORS
+// Define basic color variables.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+$v-primary:    #3F52E3;
+$v-midnight:   #1F1F3A;
+$v-calm:       #e5e3e3;
+$v-cream:      #f9f7f7;
+
+$v-alert:      #F44336;
+$v-success:    #4CAF50;
+$v-warning:    #FFC107;
+$v-dark:       #161625;
+$v-light:      #F9F7F7;
+
+$v-primary-50: lighten($v-primary, 30%);
+$v-primary-100: lighten($v-primary, 25%);
+$v-primary-200: lighten($v-primary, 15%);
+$v-primary-300: lighten($v-primary, 10%);
+$v-primary-400: lighten($v-primary, 5%);
+$v-primary-500: $v-primary;
+$v-primary-600: darken($v-primary, 5%);
+$v-primary-700: darken($v-primary, 10%);
+$v-primary-800: darken($v-primary, 20%);
+$v-primary-900: darken($v-primary, 30%);
+
+$v-calm-50: lighten($v-calm, 10%);
+$v-calm-100: lighten($v-calm, 8%);
+$v-calm-200: lighten($v-calm, 6%);
+$v-calm-300: lighten($v-calm, 4%);
+$v-calm-400: lighten($v-calm, 2%);
+$v-calm-500: $v-calm;
+$v-calm-600: darken($v-calm, 5%);
+$v-calm-700: darken($v-calm, 10%);
+$v-calm-800: darken($v-calm, 20%);
+$v-calm-900: darken($v-calm, 30%);
+
+$v-cream-50: lighten($v-cream, 30%);
+$v-cream-100: lighten($v-cream, 25%);
+$v-cream-200: lighten($v-cream, 15%);
+$v-cream-300: lighten($v-cream, 10%);
+$v-cream-400: lighten($v-cream, 5%);
+$v-cream-500: $v-cream;
+$v-cream-600: darken($v-cream, 5%);
+$v-cream-700: darken($v-cream, 10%);
+$v-cream-800: darken($v-cream, 20%);
+$v-cream-900: darken($v-cream, 30%);
+
+$v-light-50: lighten($v-light, 30%);
+$v-light-100: lighten($v-light, 25%);
+$v-light-200: lighten($v-light, 15%);
+$v-light-300: lighten($v-light, 10%);
+$v-light-400: lighten($v-light, 5%);
+$v-light-500: $v-light;
+$v-light-600: darken($v-light, 5%);
+$v-light-700: darken($v-light, 10%);
+$v-light-800: darken($v-light, 20%);
+$v-light-900: darken($v-light, 30%);
+
+// ui colors
+$v-alert-50: lighten($v-alert, 30%);
+$v-alert-100: lighten($v-alert, 25%);
+$v-alert-200: lighten($v-alert, 15%);
+$v-alert-300: lighten($v-alert, 10%);
+$v-alert-400: lighten($v-alert, 5%);
+$v-alert-500: $v-alert;
+$v-alert-600: darken($v-alert, 5%);
+$v-alert-700: darken($v-alert, 10%);
+$v-alert-800: darken($v-alert, 20%);
+$v-alert-900: darken($v-alert, 30%);
+
+$v-success-50: lighten($v-success, 30%);
+$v-success-100: lighten($v-success, 25%);
+$v-success-200: lighten($v-success, 15%);
+$v-success-300: lighten($v-success, 10%);
+$v-success-400: lighten($v-success, 5%);
+$v-success-500: $v-success;
+$v-success-600: darken($v-success, 5%);
+$v-success-700: darken($v-success, 10%);
+$v-success-800: darken($v-success, 20%);
+$v-success-900: darken($v-success, 30%);
+
+$v-warning-50: lighten($v-warning, 24%);
+$v-warning-100: lighten($v-warning, 16%);
+$v-warning-200: lighten($v-warning, 12%);
+$v-warning-300: lighten($v-warning, 8%);
+$v-warning-400: lighten($v-warning, 4%);
+$v-warning-500: $v-warning;
+$v-warning-600: darken($v-warning, 5%);
+$v-warning-700: darken($v-warning, 10%);
+$v-warning-800: darken($v-warning, 20%);
+$v-warning-900: darken($v-warning, 30%);
+
+$v-dark-50: lighten($v-dark, 30%);
+$v-dark-100: lighten($v-dark, 25%);
+$v-dark-200: lighten($v-dark, 15%);
+$v-dark-300: lighten($v-dark, 10%);
+$v-dark-400: lighten($v-dark, 5%);
+$v-dark-500: $v-dark;
+$v-dark-600: darken($v-dark, 5%);
+$v-dark-700: darken($v-dark, 10%);
+$v-dark-800: darken($v-dark, 20%);
+$v-dark-900: darken($v-dark, 30%);
+
+$v-light-50: lighten($v-light, 10%);
+$v-light-100: lighten($v-light, 8%);
+$v-light-200: lighten($v-light, 6%);
+$v-light-300: lighten($v-light, 4%);
+$v-light-400: lighten($v-light, 2%);
+$v-light-500: $v-light;
+$v-light-600: darken($v-light, 5%);
+$v-light-700: darken($v-light, 10%);
+$v-light-800: darken($v-light, 20%);
+$v-light-900: darken($v-light, 30%);
+
+
+// default text colours
+$v-color-text-body: $v-dark-400;
+$v-color-text-header: $v-dark-700;
+
+// inverted text colours
+$color-text-i-body: white;
+$color-text-i-header: white;
+ //================================================//
+// FONTS
+// Define basic font variables.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700,900|Vesper+Libre:900);
+$v-font-default: 'Inconsolata', monospace;
+$v-font-header: 'Vesper Libre', serif;
+$v-font-logo: 'Inconsolata', monospace;
+$v-font-serif: 'Inconsolata', monospace;
+
+$v-size-base-desktop: 1.125em;  // 18px
+$v-size-base-tablet: 1em;       // 16px
+$v-size-base-mobile: 0.875em;   // 14px
+$v-size-typeratio: 1.3;
+$v-size-lineheight-header: 1.2;
+$v-size-lineheight-body: 1.618;
+
+$v-size-desktop-h5: $v-size-base-desktop;
+$v-size-desktop-h6: $v-size-desktop-h5 / $v-size-typeratio;
+$v-size-desktop-h4: $v-size-base-desktop * $v-size-typeratio;
+$v-size-desktop-h3: $v-size-desktop-h4 * $v-size-typeratio;
+$v-size-desktop-h2: $v-size-desktop-h3 * $v-size-typeratio;
+$v-size-desktop-h1: $v-size-desktop-h2 * $v-size-typeratio;
+
+$v-size-tablet-h5: $v-size-base-tablet;
+$v-size-tablet-h6: $v-size-tablet-h5 / $v-size-typeratio;
+$v-size-tablet-h4: $v-size-base-tablet * $v-size-typeratio;
+$v-size-tablet-h3: $v-size-tablet-h4 * $v-size-typeratio;
+$v-size-tablet-h2: $v-size-tablet-h3 * $v-size-typeratio;
+$v-size-tablet-h1: $v-size-tablet-h2 * $v-size-typeratio;
+
+$v-size-mobile-h5: $v-size-base-mobile;
+$v-size-mobile-h6: $v-size-mobile-h5 / $v-size-typeratio;
+$v-size-mobile-h4: $v-size-base-mobile * $v-size-typeratio;
+$v-size-mobile-h3: $v-size-mobile-h4 * $v-size-typeratio;
+$v-size-mobile-h2: $v-size-mobile-h3 * $v-size-typeratio;
+$v-size-mobile-h1: $v-size-mobile-h2 * $v-size-typeratio;
+ //================================================//
+// SIZES
+// Define variable sizes to use.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+$v-size-radius: 0px;
+$v-size-border-width: 1px;
+</textarea><textarea class="sourceJs"></textarea></div><script>var sourceCss = document.querySelector('textarea.sourceCss').textContent;
+var sourceJs = document.querySelector('textarea.sourceJs').textContent;
+
+var guides = document.querySelectorAll('.guide');
+var iframes = document.querySelectorAll('.preview iframe');
+
+// forEach for nodelists...
+NodeList.prototype.forEach = Array.prototype.forEach;
+
+
+/**
+ * create new guide element that contains a preview in a iframe
+ * and toggle to view the source
+ * @param element
+ */
+function createGuideElement(element) {
+    // already setup
+    if(element.__hasGuide) {
+        return;
+    }
+
+    var preview = element.querySelector('.preview');
+    var source = element.querySelector('.source');
+    var iframe = element.querySelector('.preview iframe');
+
+    if(!source) {
+        return;
+    }
+
+    // write the preview html to the iframe
+    var d = iframe.contentWindow.document;
+    d.open();
+    d.write("<!DOCTYPE html><html><head></head><body style='padding: 20px'>"+ source.textContent +"</body></html>");
+
+    // append stylesheet
+    var stylesheet = d.createElement('style');
+    stylesheet.innerHTML = sourceCss;
+    d.querySelector('head').appendChild(stylesheet);
+
+    // append js
+    var script = d.createElement('script');
+    script.innerHTML = sourceJs;
+    d.querySelector('head').appendChild(script);
+
+    d.close();
+
+    // toggle link
+    element.querySelector("a.toggle").addEventListener("click", function(ev) {
+        preview.classList.toggle('hidden');
+        source.classList.toggle('hidden');
+        ev.preventDefault();
+    });
+
+    element.__hasGuide = true;
+}
+
+/**
+ * load the visible guide element
+ */
+function loadVisibleGuides() {
+    guides.forEach(function(guide) {
+        if(guide.offsetHeight && guide.offsetWidth) {
+            createGuideElement(guide);
+        }
+    });
+    scaleIframes();
+}
+
+/**
+ * scale the iframes to contain their content
+ */
+function scaleIframes() {
+    iframes.forEach(function(frame) {
+        frame.height = frame.contentWindow.document.querySelector('html').scrollHeight;
+    });
+}
+
+
+window.addEventListener('hashchange', loadVisibleGuides);
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        loadVisibleGuides();
+        setInterval(scaleIframes, 500);
+    }, 100)
+}, false);
+
+</script></body></html>
