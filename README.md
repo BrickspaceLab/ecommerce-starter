@@ -62,6 +62,8 @@
 - [ ]  Share admin access to Facebook pixel and Google Analytics
 
 # Setup
+
 1. Run `theme watch` in root
 1. Run `sudo npm install` in assets directory
 1. Run `gulp watch` in assets directory
+1. Run `npm run kss` to generate styleguide
