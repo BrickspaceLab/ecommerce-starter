@@ -1,0 +1,76 @@
+//================================================//
+// TABLES
+// Basic styles to apply for tables.
+// status: ✅ LIVE
+// author: Thomas Kimura
+/**
+* ## Tables
+*/
+//================================================//
+
+
+//================================================//
+/**
+* Table:
+*
+*     @example
+*     <table style="width:100%">
+*       <tr>
+*         <th>Firstname</th>
+*         <th>Lastname</th>
+*         <th>Age</th>
+*       </tr>
+*       <tr>
+*         <td>Jill</td>
+*         <td>Smith</td>
+*         <td>50</td>
+*       </tr>
+*       <tr>
+*         <td>Eve</td>
+*         <td>Jackson</td>
+*         <td>94</td>
+*       </tr>
+*     </table>
+*/
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+table tr {
+  border-bottom: solid 1px $v-calm;
+  &:hover {
+    border-bottom: solid 1px $v-color-text-body;
+    background: $v-cream;
+  }
+}
+
+table td {
+  vertical-align: middle;
+  border-left: solid 1px $v-calm;
+
+  @include padding-tb05;
+  @include padding-lr05;
+}
+
+table th {
+  text-align: left;
+  border-left: solid 1px $v-calm;
+
+  @include padding-tb05;
+  @include padding-lr05;
+}
+
+tr td:last-child,
+tr th:last-child {
+  border-right: solid 1px $v-calm;
+}
+
+.table-nohover {
+  &:hover {
+    background: transparent;
+  }
+}
+.table-noborder td {
+  border-bottom: none;
+}

@@ -1,0 +1,41 @@
+//================================================//
+// FONTS
+// Define basic font variables.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700,900|Vesper+Libre:900);
+$v-font-default: 'Inconsolata', monospace;
+$v-font-header: 'Vesper Libre', serif;
+$v-font-logo: 'Inconsolata', monospace;
+$v-font-serif: 'Inconsolata', monospace;
+
+$v-size-base-desktop: 1.125em;  // 18px
+$v-size-base-tablet: 1em;       // 16px
+$v-size-base-mobile: 0.875em;   // 14px
+$v-size-typeratio: 1.3;
+$v-size-lineheight-header: 1.2;
+$v-size-lineheight-body: 1.618;
+
+$v-size-desktop-h5: $v-size-base-desktop;
+$v-size-desktop-h6: $v-size-desktop-h5 / $v-size-typeratio;
+$v-size-desktop-h4: $v-size-base-desktop * $v-size-typeratio;
+$v-size-desktop-h3: $v-size-desktop-h4 * $v-size-typeratio;
+$v-size-desktop-h2: $v-size-desktop-h3 * $v-size-typeratio;
+$v-size-desktop-h1: $v-size-desktop-h2 * $v-size-typeratio;
+
+$v-size-tablet-h5: $v-size-base-tablet;
+$v-size-tablet-h6: $v-size-tablet-h5 / $v-size-typeratio;
+$v-size-tablet-h4: $v-size-base-tablet * $v-size-typeratio;
+$v-size-tablet-h3: $v-size-tablet-h4 * $v-size-typeratio;
+$v-size-tablet-h2: $v-size-tablet-h3 * $v-size-typeratio;
+$v-size-tablet-h1: $v-size-tablet-h2 * $v-size-typeratio;
+
+$v-size-mobile-h5: $v-size-base-mobile;
+$v-size-mobile-h6: $v-size-mobile-h5 / $v-size-typeratio;
+$v-size-mobile-h4: $v-size-base-mobile * $v-size-typeratio;
+$v-size-mobile-h3: $v-size-mobile-h4 * $v-size-typeratio;
+$v-size-mobile-h2: $v-size-mobile-h3 * $v-size-typeratio;
+$v-size-mobile-h1: $v-size-mobile-h2 * $v-size-typeratio;

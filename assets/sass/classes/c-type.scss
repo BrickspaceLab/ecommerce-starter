@@ -1,0 +1,145 @@
+//================================================//
+// TYPE
+// Helper classes used to customize text elements.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+//================================================//
+// ALIGNMENT
+.h-tx-center {
+  @include tx-center;
+}
+.h-tx-right {
+  @include tx-right;
+}
+.h-tx-justify {
+  @include tx-justify;
+}
+.h-tx-center-small {
+  @include tx-center-small;
+}
+
+
+//================================================//
+// COLOR
+// brand colours
+.h-tx-primary{ @include tx-primary; }
+.h-tx-calm{ @include tx-calm; }
+.h-tx-cream{ @include tx-cream; }
+
+// base colours
+.h-tx-alert{ @include tx-alert; }
+.h-tx-success{ @include tx-success; }
+.h-tx-warning{ @include tx-warning; }
+.h-tx-dark{ @include tx-dark; }
+.h-tx-light{ @include tx-light; }
+.h-tx-white{ @include tx-white; }
+.h-tx-black{ @include tx-black; }
+
+
+//================================================//
+// SIZE
+.h-tx-smallest {
+  @include tx-smallest;
+}
+.h-tx-smaller {
+  @include tx-smaller;
+}
+.h-tx-small {
+  @include tx-small;
+}
+.h-tx-big {
+  @include tx-big;
+}
+.h-tx-bigger {
+  @include tx-bigger;
+}
+.h-tx-biggest {
+  @include tx-biggest;
+}
+
+
+//================================================//
+// FONT WEIGHT
+.h-tx-weight-100 {
+  @include tx-weight-100;
+}
+.h-tx-weight-200 {
+  @include tx-weight-200;
+}
+.h-tx-weight-300 {
+  @include tx-weight-300;
+}
+.h-tx-weight-400 {
+  @include tx-weight-400;
+}
+.h-tx-weight-500 {
+  @include tx-weight-500;
+}
+.h-tx-weight-600 {
+  @include tx-weight-600;
+}
+.h-tx-weight-700 {
+  @include tx-weight-700;
+}
+.h-tx-weight-800 {
+  @include tx-weight-800;
+}
+.h-tx-weight-900 {
+  @include tx-weight-900;
+}
+
+
+//================================================//
+// LETTER SPACING
+.h-tx-letterspacing-1 {
+  @include tx-letterspacing-1;
+}
+.h-tx-letterspacing-2 {
+  @include tx-letterspacing-2;
+}
+.h-tx-letterspacing-3 {
+  @include tx-letterspacing-3;
+}
+
+
+//================================================//
+// LISTS
+.tx-list-none {
+  @include tx-list-none;
+}
+
+
+//================================================//
+// DECORATION
+.h-tx-decoration-none {
+  @include tx-decoration-none;
+}
+.h-tx-decoration-strike {
+  @include tx-decoration-strike
+}
+.h-tx-decoration-underline {
+  @include tx-decoration-underline
+}
+
+
+//================================================//
+// TRANSFORM
+.h-tx-transform-uppercase {
+  @include tx-transform-uppercase;
+}
+
+
+//================================================//
+// FAMILY
+.h-tx-family-header {
+  @include tx-family-header;
+}
+.h-tx-family-default {
+  @include tx-family-default;
+}
+.h-tx-family-serif {
+  @include tx-family-serif;
+}

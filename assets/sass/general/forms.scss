@@ -1,0 +1,97 @@
+//================================================//
+// FORM
+// Basic styleing for all standard form.
+// and input elements.
+// status: ✅ LIVE
+// author: Thomas Kimura
+/**
+* ## Form Elements
+*/
+//================================================//
+
+
+fieldset {
+  border: none;
+
+  @include padding-1;
+}
+
+//================================================//
+/**
+* Input:
+*
+*     @example
+*     <input type="text" placeholder="Your name"/>
+*/
+input,
+button {
+  line-height: 1.618;
+}
+
+
+//================================================//
+/**
+* Textarea:
+*
+*     @example
+*     <textarea type="text" placeholder="Your name"></textarea>
+*/
+//================================================//
+/**
+* Select:
+*
+*     @example
+*     <select>
+*       <option value="volvo">Volvo</option>
+*       <option value="saab">Saab</option>
+*       <option value="mercedes">Mercedes</option>
+*       <option value="audi">Audi</option>
+*     </select>
+*/
+input,
+textarea,
+select,
+button {
+  font-size: 1em;
+  max-width: 100%;
+  padding: .5rem !important;
+  border: $v-size-border-width solid $v-calm;
+  outline: none;
+
+  @include padding-05;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type=text],
+input[type=number],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=month],
+input[type=week],
+input[type=email],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+textarea,
+select {
+  background: $v-calm-300;
+  &:hover {
+    border-color: $v-calm-700;
+    background: $v-calm-400;
+  }
+  &:focus {
+    border-color: $v-primary;
+    background: $v-calm-400;
+  }
+}
+
+.input-chop-right {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}

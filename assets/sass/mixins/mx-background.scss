@@ -1,0 +1,142 @@
+//================================================//
+// BACKGROUND
+// Mixins that are used to apply different colours
+// to HTML elements.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+@mixin cb-white {background: white;}
+@mixin cb-black {background: black;}
+
+
+// brand colours
+@mixin cb-primary {
+  background: $v-primary;
+  border-color: $v-primary;
+}
+@mixin cb-midnight {
+  background: $v-midnight;
+  border-color: $v-midnight;
+}
+@mixin cb-calm {
+  background: $v-calm;
+  border-color: $v-calm;
+}
+@mixin cb-cream {
+  background: $v-cream;
+  border-color: $v-cream;
+}
+
+
+// base
+@mixin cb-alert {
+  background: $v-alert;
+  border-color: $v-alert;
+}
+@mixin cb-success {
+  background: $v-success;
+  border-color: $v-success;
+}
+@mixin cb-warning {
+  background: $v-warning;
+  border-color: $v-warning;
+}
+@mixin cb-dark {
+  background: $v-dark;
+  border-color: $v-dark;
+}
+@mixin cb-light {
+  background: $v-light;
+  border-color: $v-light;
+}
+
+
+@mixin cb-primary-50 {background: $v-primary-100;}
+@mixin cb-primary-100 {background: $v-primary-100;}
+@mixin cb-primary-200 {background: $v-primary-200;}
+@mixin cb-primary-300 {background: $v-primary-300;}
+@mixin cb-primary-400 {background: $v-primary-400;}
+@mixin cb-primary-500 {background: $v-primary-500;}
+@mixin cb-primary-600 {background: $v-primary-600;}
+@mixin cb-primary-700 {background: $v-primary-700;}
+@mixin cb-primary-800 {background: $v-primary-800;}
+@mixin cb-primary-900 {background: $v-primary-900;}
+
+@mixin cb-calm-50 {background: $v-calm-100;}
+@mixin cb-calm-100 {background: $v-calm-100;}
+@mixin cb-calm-200 {background: $v-calm-200;}
+@mixin cb-calm-300 {background: $v-calm-300;}
+@mixin cb-calm-400 {background: $v-calm-400;}
+@mixin cb-calm-500 {background: $v-calm-500;}
+@mixin cb-calm-600 {background: $v-calm-600;}
+@mixin cb-calm-700 {background: $v-calm-700;}
+@mixin cb-calm-800 {background: $v-calm-800;}
+@mixin cb-calm-900 {background: $v-calm-900;}
+
+@mixin cb-cream-50 {background: $v-cream-100;}
+@mixin cb-cream-100 {background: $v-cream-100;}
+@mixin cb-cream-200 {background: $v-cream-200;}
+@mixin cb-cream-300 {background: $v-cream-300;}
+@mixin cb-cream-400 {background: $v-cream-400;}
+@mixin cb-cream-500 {background: $v-cream-500;}
+@mixin cb-cream-600 {background: $v-cream-600;}
+@mixin cb-cream-700 {background: $v-cream-700;}
+@mixin cb-cream-800 {background: $v-cream-800;}
+@mixin cb-cream-900 {background: $v-cream-900;}
+
+@mixin cb-alert-50 {background: $v-alert-100;}
+@mixin cb-alert-100 {background: $v-alert-100;}
+@mixin cb-alert-200 {background: $v-alert-200;}
+@mixin cb-alert-300 {background: $v-alert-300;}
+@mixin cb-alert-400 {background: $v-alert-400;}
+@mixin cb-alert-500 {background: $v-alert-500;}
+@mixin cb-alert-600 {background: $v-alert-600;}
+@mixin cb-alert-700 {background: $v-alert-700;}
+@mixin cb-alert-800 {background: $v-alert-800;}
+@mixin cb-alert-900 {background: $v-alert-900;}
+
+@mixin cb-success-50 {background: $v-success-100;}
+@mixin cb-success-100 {background: $v-success-100;}
+@mixin cb-success-200 {background: $v-success-200;}
+@mixin cb-success-300 {background: $v-success-300;}
+@mixin cb-success-400 {background: $v-success-400;}
+@mixin cb-success-500 {background: $v-success-500;}
+@mixin cb-success-600 {background: $v-success-600;}
+@mixin cb-success-700 {background: $v-success-700;}
+@mixin cb-success-800 {background: $v-success-800;}
+@mixin cb-success-900 {background: $v-success-900;}
+
+@mixin cb-warning-50 {background: $v-warning-100;}
+@mixin cb-warning-100 {background: $v-warning-100;}
+@mixin cb-warning-200 {background: $v-warning-200;}
+@mixin cb-warning-300 {background: $v-warning-300;}
+@mixin cb-warning-400 {background: $v-warning-400;}
+@mixin cb-warning-500 {background: $v-warning-500;}
+@mixin cb-warning-600 {background: $v-warning-600;}
+@mixin cb-warning-700 {background: $v-warning-700;}
+@mixin cb-warning-800 {background: $v-warning-800;}
+@mixin cb-warning-900 {background: $v-warning-900;}
+
+@mixin cb-dark-50 {background: $v-dark-100;}
+@mixin cb-dark-100 {background: $v-dark-100;}
+@mixin cb-dark-200 {background: $v-dark-200;}
+@mixin cb-dark-300 {background: $v-dark-300;}
+@mixin cb-dark-400 {background: $v-dark-400;}
+@mixin cb-dark-500 {background: $v-dark-500;}
+@mixin cb-dark-600 {background: $v-dark-600;}
+@mixin cb-dark-700 {background: $v-dark-700;}
+@mixin cb-dark-800 {background: $v-dark-800;}
+@mixin cb-dark-900 {background: $v-dark-900;}
+
+@mixin cb-light-50 {background: $v-light-50;}
+@mixin cb-light-100 {background: $v-light-100;}
+@mixin cb-light-200 {background: $v-light-200;}
+@mixin cb-light-300 {background: $v-light-300;}
+@mixin cb-light-400 {background: $v-light-400;}
+@mixin cb-light-500 {background: $v-light-500;}
+@mixin cb-light-600 {background: $v-light-600;}
+@mixin cb-light-700 {background: $v-light-700;}
+@mixin cb-light-800 {background: $v-light-800;}
+@mixin cb-light-900 {background: $v-light-900;}

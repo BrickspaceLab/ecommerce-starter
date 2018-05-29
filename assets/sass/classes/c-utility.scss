@@ -1,0 +1,111 @@
+//================================================//
+// UTILITY
+// Additonal helper classes to help style elements.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+//================================================//
+// CORNERS
+.h-rounded {
+  @include rounded;
+}
+.h-circular {
+  @include circular;
+}
+
+
+//================================================//
+// VISBILITY
+.h-display-none {
+  @include display-none;
+}
+.h-display-inline {
+  @include display-inline;
+}
+.h-display-inlineblock {
+  @include display-inlineblock;
+}
+.h-display-block {
+  @include display-block;
+}
+.h-display-initial {
+  @include display-initial;
+}
+.h-display-print-none {
+  @include display-print-none;
+}
+.h-mobile-only {
+  @include mobile-only;
+}
+.h-desktop-only {
+  @include desktop-only;
+}
+.h-tablet-up {
+  @include tablet-up;
+}
+.h-tablet-down {
+  @include tablet-down;
+}
+
+
+//================================================//
+// OVERFLOW
+.h-overflow-hidden {
+  @include overflow-hidden;
+}
+.h-overflow-ellipsis {
+  @include overflow-ellipsis;
+}
+
+
+//================================================//
+// Z-INDEX
+.h-zindex-n10 {
+  @include zindex-n10;
+}
+.h-zindex-n1 {
+  @include zindex-n1;
+}
+.h-zindex-1 {
+  @include zindex-1;
+}
+.h-zindex-10 {
+  @include zindex-10;
+}
+.h-zindex-100 {
+  @include zindex-100;
+}
+.h-zindex-1000 {
+  @include zindex-1000;
+}
+
+
+//================================================//
+// OPACITY
+.h-opacity-full {
+  @include opacity-full;
+}
+.h-opacity-0 {
+  @include opacity-0;
+}
+.h-opacity-1 {
+  @include opacity-1;
+}
+.h-opacity-2 {
+  @include opacity-2;
+}
+.h-opacity-3 {
+  @include opacity-3;
+}
+.h-opacity-4 {
+  @include opacity-4;
+}
+
+
+//================================================//
+// CURSOR
+.h-cursor-pointer {
+  @include cursor-pointer;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "author": "Brickspace Lab",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-shell": "^0.6.3",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-styledown": "0.0.2",
+    "gulp-uglify": "^3.0.0",
+    "styledown": "^2.0.0-pre1"
+  }
+}

@@ -1,0 +1,38 @@
+//================================================//
+// BORDER
+// Mixins that are used to add borders.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+@mixin border-none {
+  border: none;
+}
+@mixin border-wide {
+  border: solid 5px;
+}
+@mixin border-dashed {
+  border-width: $v-size-border-width;
+  border-style: dashed;
+}
+@mixin border-dotted {
+  border-width: $v-size-border-width;
+  border-style: dotted;
+}
+@mixin border-solid {
+  border-width: $v-size-border-width;
+  border-style: solid;
+}
+@mixin border-solid-top {
+  border-top: $v-size-border-width solid;
+}
+@mixin border-solid-right {
+  border-right: $v-size-border-width solid;
+}
+@mixin border-solid-bottom {
+  border-bottom: $v-size-border-width solid;
+}
+@mixin border-solid-left {
+  border-left: $v-size-border-width solid;
+}

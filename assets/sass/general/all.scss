@@ -1,0 +1,45 @@
+//================================================//
+// ALL
+// Temporary code that should be split into
+// modular files.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+.inlinelogo {
+  display: inline;
+  height: 2rem;
+  vertical-align: middle;
+}
+.inlinelogo--small {
+  display: inline;
+  height: 1.5rem;
+  vertical-align: middle;
+}
+.inlinelogotype--small {
+  height: 14px;
+}
+
+
+.fa {
+  line-height: 1.618 !important;
+  vertical-align: middle;
+}
+
+
+img.emoji {
+  width: 1em;
+  height: 1em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -.1em;
+}
+
+
+.paginate {
+  @include tx-weight-900;
+  @include tx-big;
+  a {
+    @include tx-dark;
+  }
+}

@@ -1,0 +1,181 @@
+//================================================//
+// BACKGROUND
+// Helper classes used to add background
+// colours to any element.
+// status: ✅ LIVE
+// author: Thomas Kimura
+/**
+* ## Background Colours
+*/
+//================================================//
+
+
+//================================================//
+/**
+* Gradient colours:
+*
+*     @example
+*     <span class="h-cb-gradient styleguide-colorblock">#3f52e3 > #1828a4 > #1f1f3a</span>
+*/
+.h-cb-gradient {
+  background: -webkit-linear-gradient(to right, #3f52e3,#1828a4,#1f1f3a);
+  background: linear-gradient(to right, #3f52e3,#1828a4,#1f1f3a);
+}
+
+
+//================================================//
+/**
+* Base colours:
+*
+*     @example
+*     <span class="h-cb-white styleguide-colorblock">white #fff</span>
+*     <span class="h-cb-black styleguide-colorblock">black #000</span>
+*/
+.h-cb-white {@include cb-white;}
+.h-cb-black {@include cb-black;}
+
+
+//================================================//
+/**
+* Brand colours:
+*
+*     @example
+*     <span class="h-cb-primary styleguide-colorblock">primary #5e15ec</span>
+*     <span class="h-cb-midnight styleguide-colorblock">midnight #1f1f3a</span>
+*     <span class="h-cb-calm styleguide-colorblock">calm #e5e3e3</span>
+*     <span class="h-cb-cream styleguide-colorblock">cream #f9f7f7</span>
+*/
+.h-cb-primary {@include cb-primary;}
+.h-cb-midnight {@include cb-midnight;}
+.h-cb-calm {@include cb-calm;}
+.h-cb-cream {@include cb-cream;}
+
+
+//================================================//
+/**
+* Additonal colours:
+*
+*     @example
+*     <span class="h-cb-alert styleguide-colorblock">alert #af3535</span>
+*     <span class="h-cb-success styleguide-colorblock">success #1cc374</span>
+*     <span class="h-cb-warning styleguide-colorblock">warning #eadc17</span>
+*     <span class="h-cb-dark styleguide-colorblock">dark #121121</span>
+*     <span class="h-cb-light styleguide-colorblock">light #f8f8f8</span>
+*/
+.h-cb-alert {@include cb-alert;}
+.h-cb-success {@include cb-success;}
+.h-cb-warning {@include cb-warning;}
+.h-cb-dark {@include cb-dark;}
+.h-cb-light {@include cb-light;}
+
+
+//================================================//
+/**
+* Primary shades:
+*
+*     @example
+*     <span class="h-cb-primary-50 styleguide-colorblock">primary-50</span>
+*     <span class="h-cb-primary-100 styleguide-colorblock">primary-100</span>
+*     <span class="h-cb-primary-200 styleguide-colorblock">primary-200</span>
+*     <span class="h-cb-primary-300 styleguide-colorblock">primary-300</span>
+*     <span class="h-cb-primary-400 styleguide-colorblock">primary-400</span>
+*     <span class="h-cb-primary-500 styleguide-colorblock">primary-500</span>
+*     <span class="h-cb-primary-600 styleguide-colorblock">primary-600</span>
+*     <span class="h-cb-primary-800 styleguide-colorblock">primary-800</span>
+*     <span class="h-cb-primary-900 styleguide-colorblock">primary-900</span>
+*/
+.h-cb-primary {@include cb-primary;}
+.h-cb-primary-50 {@include cb-primary-50;}
+.h-cb-primary-100 {@include cb-primary-100;}
+.h-cb-primary-200 {@include cb-primary-200;}
+.h-cb-primary-300 {@include cb-primary-300;}
+.h-cb-primary-400 {@include cb-primary-400;}
+.h-cb-primary-500 {@include cb-primary-500;}
+.h-cb-primary-600 {@include cb-primary-600;}
+.h-cb-primary-700 {@include cb-primary-700;}
+.h-cb-primary-800 {@include cb-primary-800;}
+.h-cb-primary-900 {@include cb-primary-900;}
+
+// .h-cb-calm {@include cb-calm;}
+// .h-cb-calm-50 {@include cb-calm-50;}
+// .h-cb-calm-100 {@include cb-calm-100;}
+// .h-cb-calm-200 {@include cb-calm-200;}
+// .h-cb-calm-300 {@include cb-calm-300;}
+// .h-cb-calm-400 {@include cb-calm-400;}
+// .h-cb-calm-500 {@include cb-calm-500;}
+// .h-cb-calm-600 {@include cb-calm-600;}
+// .h-cb-calm-700 {@include cb-calm-700;}
+// .h-cb-calm-800 {@include cb-calm-800;}
+// .h-cb-calm-900 {@include cb-calm-900;}
+//
+// .h-cb-cream {@include cb-cream;}
+// .h-cb-cream-50 {@include cb-cream-50;}
+// .h-cb-cream-100 {@include cb-cream-100;}
+// .h-cb-cream-200 {@include cb-cream-200;}
+// .h-cb-cream-300 {@include cb-cream-300;}
+// .h-cb-cream-400 {@include cb-cream-400;}
+// .h-cb-cream-500 {@include cb-cream-500;}
+// .h-cb-cream-600 {@include cb-cream-600;}
+// .h-cb-cream-700 {@include cb-cream-700;}
+// .h-cb-cream-800 {@include cb-cream-800;}
+// .h-cb-cream-900 {@include cb-cream-900;}
+//
+// .h-cb-alert {@include cb-alert;}
+// .h-cb-alert-50 {@include cb-alert-50;}
+// .h-cb-alert-100 {@include cb-alert-100;}
+// .h-cb-alert-200 {@include cb-alert-200;}
+// .h-cb-alert-300 {@include cb-alert-300;}
+// .h-cb-alert-400 {@include cb-alert-400;}
+// .h-cb-alert-500 {@include cb-alert-500;}
+// .h-cb-alert-600 {@include cb-alert-600;}
+// .h-cb-alert-700 {@include cb-alert-700;}
+// .h-cb-alert-800 {@include cb-alert-800;}
+// .h-cb-alert-900 {@include cb-alert-900;}
+//
+// .h-cb-success {@include cb-success;}
+// .h-cb-success-50 {@include cb-success-50;}
+// .h-cb-success-100 {@include cb-success-100;}
+// .h-cb-success-200 {@include cb-success-200;}
+// .h-cb-success-300 {@include cb-success-300;}
+// .h-cb-success-400 {@include cb-success-400;}
+// .h-cb-success-500 {@include cb-success-500;}
+// .h-cb-success-600 {@include cb-success-600;}
+// .h-cb-success-700 {@include cb-success-700;}
+// .h-cb-success-800 {@include cb-success-800;}
+// .h-cb-success-900 {@include cb-success-900;}
+//
+// .h-cb-warning {@include cb-warning;}
+// .h-cb-warning-50 {@include cb-warning-50;}
+// .h-cb-warning-100 {@include cb-warning-100;}
+// .h-cb-warning-200 {@include cb-warning-200;}
+// .h-cb-warning-300 {@include cb-warning-300;}
+// .h-cb-warning-400 {@include cb-warning-400;}
+// .h-cb-warning-500 {@include cb-warning-500;}
+// .h-cb-warning-600 {@include cb-warning-600;}
+// .h-cb-warning-700 {@include cb-warning-700;}
+// .h-cb-warning-800 {@include cb-warning-800;}
+// .h-cb-warning-900 {@include cb-warning-900;}
+//
+// .h-cb-light {@include cb-light;}
+// .h-cb-light-50 {@include cb-light-50;}
+// .h-cb-light-100 {@include cb-light-100;}
+// .h-cb-light-200 {@include cb-light-200;}
+// .h-cb-light-300 {@include cb-light-300;}
+// .h-cb-light-400 {@include cb-light-400;}
+// .h-cb-light-500 {@include cb-light-500;}
+// .h-cb-light-600 {@include cb-light-600;}
+// .h-cb-light-700 {@include cb-light-700;}
+// .h-cb-light-800 {@include cb-light-800;}
+// .h-cb-light-900 {@include cb-light-900;}
+//
+// .h-cb-dark {@include cb-dark;}
+// .h-cb-dark-50 {@include cb-dark-50;}
+// .h-cb-dark-100 {@include cb-dark-100;}
+// .h-cb-dark-200 {@include cb-dark-200;}
+// .h-cb-dark-300 {@include cb-dark-300;}
+// .h-cb-dark-400 {@include cb-dark-400;}
+// .h-cb-dark-500 {@include cb-dark-500;}
+// .h-cb-dark-600 {@include cb-dark-600;}
+// .h-cb-dark-700 {@include cb-dark-700;}
+// .h-cb-dark-800 {@include cb-dark-800;}
+// .h-cb-dark-900 {@include cb-dark-900;}

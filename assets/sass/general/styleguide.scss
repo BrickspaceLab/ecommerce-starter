@@ -1,0 +1,16 @@
+//================================================//
+// STYLEGUIDE
+// Styles that apply to the auto generated
+// styleguide.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+.styleguide-colorblock {
+  @include display-inlineblock;
+  @include padding-05;
+  @include margin-b1;
+  border: 1px $v-dark solid;
+  border-radius: $v-size-radius;
+}

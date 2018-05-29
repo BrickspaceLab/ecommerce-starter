@@ -1,0 +1,37 @@
+//================================================//
+// AVATAR
+// Styling to create a circular avatars.
+// status: ✅ LIVE
+// author: Thomas Kimura
+/**
+* ## Avatars
+*/
+//================================================//
+
+
+//================================================//
+/**
+* Avatar:
+* `.a-avatar`
+*
+*     @example
+*     <img class="a-avatar" src="https://avatars.io/instagram/"/>
+*/
+.a-avatar {
+  @include circular;
+  @include border-solid;
+  border-color: $v-calm;
+  height: 1.618em;
+}
+
+/**
+* Avatar:
+* `.a-avatar--2x`
+*
+*     @example
+*     <img class="a-avatar--2x" src="https://avatars.io/instagram/"/>
+*/
+.a-avatar--2x {
+  @extend .a-avatar;
+  height: 2.618em;
+}

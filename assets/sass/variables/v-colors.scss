@@ -1,0 +1,127 @@
+//================================================//
+// COLORS
+// Define basic color variables.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+$v-primary:    #3F52E3;
+$v-midnight:   #1F1F3A;
+$v-calm:       #e5e3e3;
+$v-cream:      #f9f7f7;
+
+$v-alert:      #F44336;
+$v-success:    #4CAF50;
+$v-warning:    #FFC107;
+$v-dark:       #161625;
+$v-light:      #F9F7F7;
+
+$v-primary-50: lighten($v-primary, 30%);
+$v-primary-100: lighten($v-primary, 25%);
+$v-primary-200: lighten($v-primary, 15%);
+$v-primary-300: lighten($v-primary, 10%);
+$v-primary-400: lighten($v-primary, 5%);
+$v-primary-500: $v-primary;
+$v-primary-600: darken($v-primary, 5%);
+$v-primary-700: darken($v-primary, 10%);
+$v-primary-800: darken($v-primary, 20%);
+$v-primary-900: darken($v-primary, 30%);
+
+$v-calm-50: lighten($v-calm, 10%);
+$v-calm-100: lighten($v-calm, 8%);
+$v-calm-200: lighten($v-calm, 6%);
+$v-calm-300: lighten($v-calm, 4%);
+$v-calm-400: lighten($v-calm, 2%);
+$v-calm-500: $v-calm;
+$v-calm-600: darken($v-calm, 5%);
+$v-calm-700: darken($v-calm, 10%);
+$v-calm-800: darken($v-calm, 20%);
+$v-calm-900: darken($v-calm, 30%);
+
+$v-cream-50: lighten($v-cream, 30%);
+$v-cream-100: lighten($v-cream, 25%);
+$v-cream-200: lighten($v-cream, 15%);
+$v-cream-300: lighten($v-cream, 10%);
+$v-cream-400: lighten($v-cream, 5%);
+$v-cream-500: $v-cream;
+$v-cream-600: darken($v-cream, 5%);
+$v-cream-700: darken($v-cream, 10%);
+$v-cream-800: darken($v-cream, 20%);
+$v-cream-900: darken($v-cream, 30%);
+
+$v-light-50: lighten($v-light, 30%);
+$v-light-100: lighten($v-light, 25%);
+$v-light-200: lighten($v-light, 15%);
+$v-light-300: lighten($v-light, 10%);
+$v-light-400: lighten($v-light, 5%);
+$v-light-500: $v-light;
+$v-light-600: darken($v-light, 5%);
+$v-light-700: darken($v-light, 10%);
+$v-light-800: darken($v-light, 20%);
+$v-light-900: darken($v-light, 30%);
+
+// ui colors
+$v-alert-50: lighten($v-alert, 30%);
+$v-alert-100: lighten($v-alert, 25%);
+$v-alert-200: lighten($v-alert, 15%);
+$v-alert-300: lighten($v-alert, 10%);
+$v-alert-400: lighten($v-alert, 5%);
+$v-alert-500: $v-alert;
+$v-alert-600: darken($v-alert, 5%);
+$v-alert-700: darken($v-alert, 10%);
+$v-alert-800: darken($v-alert, 20%);
+$v-alert-900: darken($v-alert, 30%);
+
+$v-success-50: lighten($v-success, 30%);
+$v-success-100: lighten($v-success, 25%);
+$v-success-200: lighten($v-success, 15%);
+$v-success-300: lighten($v-success, 10%);
+$v-success-400: lighten($v-success, 5%);
+$v-success-500: $v-success;
+$v-success-600: darken($v-success, 5%);
+$v-success-700: darken($v-success, 10%);
+$v-success-800: darken($v-success, 20%);
+$v-success-900: darken($v-success, 30%);
+
+$v-warning-50: lighten($v-warning, 24%);
+$v-warning-100: lighten($v-warning, 16%);
+$v-warning-200: lighten($v-warning, 12%);
+$v-warning-300: lighten($v-warning, 8%);
+$v-warning-400: lighten($v-warning, 4%);
+$v-warning-500: $v-warning;
+$v-warning-600: darken($v-warning, 5%);
+$v-warning-700: darken($v-warning, 10%);
+$v-warning-800: darken($v-warning, 20%);
+$v-warning-900: darken($v-warning, 30%);
+
+$v-dark-50: lighten($v-dark, 30%);
+$v-dark-100: lighten($v-dark, 25%);
+$v-dark-200: lighten($v-dark, 15%);
+$v-dark-300: lighten($v-dark, 10%);
+$v-dark-400: lighten($v-dark, 5%);
+$v-dark-500: $v-dark;
+$v-dark-600: darken($v-dark, 5%);
+$v-dark-700: darken($v-dark, 10%);
+$v-dark-800: darken($v-dark, 20%);
+$v-dark-900: darken($v-dark, 30%);
+
+$v-light-50: lighten($v-light, 10%);
+$v-light-100: lighten($v-light, 8%);
+$v-light-200: lighten($v-light, 6%);
+$v-light-300: lighten($v-light, 4%);
+$v-light-400: lighten($v-light, 2%);
+$v-light-500: $v-light;
+$v-light-600: darken($v-light, 5%);
+$v-light-700: darken($v-light, 10%);
+$v-light-800: darken($v-light, 20%);
+$v-light-900: darken($v-light, 30%);
+
+
+// default text colours
+$v-color-text-body: $v-dark-400;
+$v-color-text-header: $v-dark-700;
+
+// inverted text colours
+$color-text-i-body: white;
+$color-text-i-header: white;

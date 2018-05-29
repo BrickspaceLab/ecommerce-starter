@@ -1,0 +1,188 @@
+//================================================//
+// BUTTONS
+// Styling to create a button element.
+// status: ✅ LIVE
+// author: Thomas Kimura
+/**
+* ## Buttons
+*/
+//================================================//
+
+
+//================================================//
+/**
+* Button:
+* `.a-button`
+*
+*     @example
+*     <a class="a-button">Button</a>
+*     <button class="a-button">Button</button>
+*/
+.a-button {
+  margin-right: .5rem;
+  transition: box-shadow .3s cubic-bezier(.8, .43, 0, .48);
+  border-color: $v-dark;
+
+  @include border-solid;
+  @include tx-weight-900;
+  @include padding-1;
+  @include cursor-pointer;
+  @include display-inlineblock;
+  @include tx-dark;
+  @include tx-decoration-none;
+  &:hover {
+    opacity: 1;
+    box-shadow: $v-dark 7px 7px 0 0;
+  }
+  .fa {
+    @include float-right;
+    @include opacity-2;
+  }
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--primary`
+*
+*     @example
+*     <a class="a-button--primary">Button</a>
+*     <button class="a-button--primary">Button</button>
+*/
+.a-button--primary {
+  @extend .a-button;
+  @include tx-white;
+  @include cb-primary;
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--dark`
+*
+*     @example
+*     <a class="a-button--dark">Button</a>
+*     <button class="a-button--dark">Button</button>
+*/
+.a-button--dark {
+  @extend .a-button;
+  @include tx-white;
+  @include cb-dark;
+
+  border-color: white;
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--invert`
+*
+*     @example
+*     <div class="h-cb-dark h-padding-05">
+*       <a class="a-button--invert">Button</a>
+*       <button class="a-button--invert">Button</button>
+*     </div>
+*/
+.a-button--invert {
+  border-color: white;
+
+  @extend .a-button;
+  @include tx-white;
+  &:hover {
+    opacity: 1;
+    box-shadow: white 7px 7px 0 0;
+  }
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--plain-dark`
+*
+*     @example
+*     <div class="h-cb-dark h-padding-05">
+*       <a class="a-button--plain-dark">Button</a>
+*       <button class="a-button--plain-dark">Button</button>
+*     </div>
+*/
+.a-button--plain-dark {
+  border-color: transparent;
+
+  @extend .a-button;
+  @include tx-white;
+  &:hover {
+    border-color: $v-cream-900;
+  }
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--clear`
+*
+*     @example
+*     <a class="a-button--clear">Button</a>
+*     <button class="a-button--clear">Button</button>
+*/
+.a-button--clear {
+  border: none;
+
+  @extend .a-button;
+  &:hover {
+    box-shadow: none;
+    background: rgba(0,0,0,0.1);
+  }
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--small`
+*
+*     @example
+*     <a class="a-button--small">Button</a>
+*     <button class="a-button--small">Button</a>
+*/
+.a-button--small {
+  @extend .a-button;
+  @include padding-05;
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--chop-left`
+*
+*     @example
+*     <a class="a-button--small button--chop-left">Button</a>
+*     <button class="a-button--small button--chop-left">Button</a>
+*/
+.a-button--chop-left {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+
+//================================================//
+/**
+* Button:
+* `.a-button--nohover`
+*
+*     @example
+*     <a class="a-button--nohover">Button</a>
+*     <button class="a-button--nohover">Button</button>
+*/
+.a-button--nohover {
+  @extend .a-button;
+  &:hover {
+    box-shadow: none !important;
+    opacity:0.8;
+  }
+}

@@ -1,0 +1,47 @@
+<!-- TEMPLATES: collection.liquid -->
+
+{% paginate collection.products by 12 %}
+
+<header class="h-padding-tb2">
+  <div class="row align-center">
+
+    <div class="large-12 medium-12 small-12 columns">
+      <h1 class="h-margin-none">
+        {{ collection.title }}
+      </h1>
+      <p class="h-margin-none h-tx-bigger">
+        {{ collection.description }}
+      </p>
+    </div>
+
+  </div>
+</header>
+
+
+<section>
+  <div class="row align-center">
+    {% for product in collection.products %}
+      <div class="columns large-4 medium-8 small-12">
+        {% include 'product-thumbnail' %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+
+{% if paginate.pages > 1 %}
+<section class="h-border-solid-top h-border-color-dark">
+  <div class="row align-center h-padding-tb1">
+    <div class="columns small-12">
+      <div class="paginate">
+        {{ paginate | default_pagination | replace: '&laquo; Previous', '&lBarr;' | replace: 'Next &raquo;', '&rBarr;' }}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+
+{% endpaginate %}
+
+<!-- END: collection.liquid -->

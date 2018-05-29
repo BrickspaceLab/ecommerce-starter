@@ -1,0 +1,47 @@
+//================================================//
+// TINT
+// Mixins that are used to apply transparent
+// background colours.
+// status: 🚧 IN-PROGRESS
+// author: Thomas Kimura
+//================================================//
+
+
+@mixin color-tint-dark-1 {
+  background: transparentize($dark, .9);
+}
+@mixin color-tint-dark-2 {
+  background: transparentize($dark, .7);
+}
+@mixin color-tint-dark-3 {
+  background: transparentize($dark, .5);
+}
+@mixin color-tint-dark-4 {
+  background: transparentize($dark, .3);
+}
+
+@mixin color-tint-light-1 {
+  background: transparentize($v-light, .9);
+}
+@mixin color-tint-light-2 {
+  background: transparentize($v-light, .7);
+}
+@mixin color-tint-light-3 {
+  background: transparentize($v-light, .5);
+}
+@mixin color-tint-light-4 {
+  background: transparentize($v-light, .3);
+}
+
+@mixin color-tint-primary-1 {
+  background: transparentize($v-primary, .9);
+}
+@mixin color-tint-primary-2 {
+  background: transparentize($v-primary, .7);
+}
+@mixin color-tint-primary-3 {
+  background: transparentize($v-primary, .5);
+}
+@mixin color-tint-primary-4 {
+  background: transparentize($v-primary, .3);
+}

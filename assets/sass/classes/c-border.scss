@@ -1,0 +1,45 @@
+//================================================//
+// BORDER
+// Helper classes used to add borders to
+// any element.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+.h-border-none {
+  @include border-none;
+}
+.h-border-wide {
+  @include border-wide;
+}
+.h-border-dashed {
+  @include border-dashed;
+}
+.h-border-dotted {
+  @include border-dotted;
+}
+.h-border-solid {
+  @include border-solid;
+}
+.h-border-solid-top {
+  @include border-solid-top;
+}
+.h-border-solid-right {
+  @include border-solid-right;
+}
+.h-border-solid-bottom {
+  @include border-solid-bottom;
+}
+.h-border-solid-left {
+  @include border-solid-left;
+}
+.h-border-color-calm {
+  border-color: $v-calm;
+}
+.h-border-color-cream {
+  border-color: $v-cream;
+}
+.h-border-color-dark {
+  border-color: $v-dark;
+}

@@ -1,0 +1,70 @@
+//================================================//
+// NAV
+// Styling to the navigation component
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+.m-navpage__bar {
+  @include full;
+  @include zindex-1000;
+  @include position-fixed;
+  @include border-solid-bottom;
+
+  border-color: $v-dark;
+  .row {
+    @include padding-tb1;
+  }
+  h1 {
+    @include margin-none;
+    @include tx-bigger;
+  }
+  a {
+    line-height: $v-size-lineheight-header;
+
+    @include tx-decoration-none;
+  }
+}
+
+.m-navpage__menu {
+  @include border-solid-left;
+  position: fixed;
+  z-index: 2001;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  width: 450px;
+  max-width: 100%;
+  height: 100%;
+  transition-timing-function: cubic-bezier(.8,.43,0,.48);
+  transition-duration: .2s;
+  transition-property: transform;
+  transform: translateX(100%);
+  border-color: $v-calm;
+}
+
+.m-navpage__menu--visible {
+  cursor: default;
+  transform: translateX(0%);
+}
+
+.m-navpage__container {
+  z-index: 2000;
+  transition-timing-function: cubic-bezier(.8,.43,0,.48);
+  transition-duration: .2s;
+  transition-property: opacity;
+  opacity: 0;
+
+  @include position-fixed;
+}
+
+.m-navpage__container--visible {
+  z-index: 2000;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: e-resize;
+  opacity: 1;
+  background: rgba(0,0,0,.8);
+}

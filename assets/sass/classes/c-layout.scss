@@ -1,0 +1,181 @@
+//================================================//
+// LAYOUT
+// Helper classes used to apply spacing and
+// layout changes to elements.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+//================================================//
+// MISC
+//================================================//
+/**
+* Centering things:
+*
+*     @example
+*     <div class="row expanded align-stretch">
+*       <div class="large-4 medium-4 small-12 columns">
+*         <div class="h-cb-calm">
+*           <img class="h-padding-4" src="/assets/img/work/hnt_phone2.png"/>
+*         </div>
+*       </div>
+*       <div class="large-8 medium-8 small-12 columns">
+*         <div class="h-centercontainer h-cb-calm">
+*           <img class="h-centercontainer--item h-padding-4" src="/assets/img/work/hnt_macbook.png"/>
+*         </div>
+*       </div>
+*     </div>
+*/
+@media (min-width: 900px) {
+  .h-centercontainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .h-centercontainer--item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin: auto;
+  }
+}
+
+
+//================================================//
+// FLOAT
+.h-float-right {
+  @include float-right;
+}
+.h-float-left {
+  @include float-left;
+}
+.h-float-none {
+  @include float-none;
+}
+
+
+//================================================//
+// POSITIONING
+.h-position-fixed {
+  @include position-fixed;
+}
+.h-position-absolute {
+  @include position-absolute;
+}
+.h-position-relative {
+  @include position-relative;
+}
+.h-position-static {
+  @include position-static;
+}
+.h-center-block {
+  @include center-block;
+}
+.h-full {
+  @include full;
+}
+
+
+//================================================//
+// MARGIN
+.h-margin-none {@include margin-none;}
+.h-margin-none-b {@include margin-none-b;}
+.h-margin-none-t {@include margin-none-t;}
+.h-margin-none-l {@include margin-none-l;}
+.h-margin-none-r {@include margin-none-r;}
+
+.h-margin-05 {@include margin-05;}
+.h-margin-1 {@include margin-1;}
+.h-margin-2 {@include margin-2;}
+.h-margin-3 {@include margin-3;}
+.h-margin-4 {@include margin-4;}
+.h-margin-5 {@include margin-5;}
+.h-margin-6 {@include margin-6;}
+
+.h-margin-tb05 {@include margin-tb05;}
+.h-margin-tb1 {@include margin-tb1;}
+.h-margin-tb2 {@include margin-tb2;}
+.h-margin-tb3 {@include margin-tb3;}
+.h-margin-tb4 {@include margin-tb4;}
+.h-margin-tb5 {@include margin-tb5;}
+.h-margin-tb6 {@include margin-tb6;}
+
+.h-margin-lr05 {@include margin-lr05;}
+.h-margin-lr1 {@include margin-lr1;}
+.h-margin-lr2 {@include margin-lr2;}
+.h-margin-lr3 {@include margin-lr3;}
+.h-margin-lr4 {@include margin-lr4;}
+.h-margin-lr5 {@include margin-lr5;}
+.h-margin-lr6 {@include margin-lr6;}
+
+.h-margin-t05 {@include margin-t05;}
+.h-margin-t1 {@include margin-t1;}
+.h-margin-t2 {@include margin-t2;}
+.h-margin-t3 {@include margin-t3;}
+.h-margin-t4 {@include margin-t4;}
+.h-margin-t5 {@include margin-t5;}
+.h-margin-t6 {@include margin-t6;}
+
+.h-margin-b05 {@include margin-b05;}
+.h-margin-b1 {@include margin-b1;}
+.h-margin-b2 {@include margin-b2;}
+.h-margin-b3 {@include margin-b3;}
+.h-margin-b4 {@include margin-b4;}
+.h-margin-b5 {@include margin-b5;}
+.h-margin-b6 {@include margin-b6;}
+
+
+//================================================//
+// PADDING
+.h-padding-none {@include padding-none;}
+.h-padding-none-b {@include padding-none-b;}
+.h-padding-none-t {@include padding-none-t;}
+.h-padding-none-l {@include padding-none-l;}
+.h-padding-none-r {@include padding-none-r;}
+
+.h-padding-05 {@include padding-05;}
+.h-padding-1 {@include padding-1;}
+.h-padding-2 {@include padding-2;}
+.h-padding-3 {@include padding-3;}
+.h-padding-4 {@include padding-4;}
+.h-padding-5 {@include padding-5;}
+.h-padding-6 {@include padding-6;}
+
+.h-padding-tb05 {@include padding-tb05;}
+.h-padding-tb1 {@include padding-tb1;}
+.h-padding-tb2 {@include padding-tb2;}
+.h-padding-tb3 {@include padding-tb3;}
+.h-padding-tb4 {@include padding-tb4;}
+.h-padding-tb5 {@include padding-tb5;}
+.h-padding-tb6 {@include padding-tb6;}
+
+.h-padding-lr05 {@include padding-lr05;}
+.h-padding-lr1 {@include padding-lr1;}
+.h-padding-lr2 {@include padding-lr2;}
+.h-padding-lr3 {@include padding-lr3;}
+.h-padding-lr4 {@include padding-lr4;}
+.h-padding-lr5 {@include padding-lr5;}
+.h-padding-lr6 {@include padding-lr6;}
+
+.h-padding-t05 {@include padding-t05;}
+.h-padding-t1 {@include padding-t1;}
+.h-padding-t2 {@include padding-t2;}
+.h-padding-t3 {@include padding-t3;}
+.h-padding-t4 {@include padding-t4;}
+.h-padding-t5 {@include padding-t5;}
+.h-padding-t6 {@include padding-t6;}
+
+.h-padding-b05 {@include padding-b05;}
+.h-padding-b1 {@include padding-b1;}
+.h-padding-b2 {@include padding-b2;}
+.h-padding-b3 {@include padding-b3;}
+.h-padding-b4 {@include padding-b4;}
+.h-padding-b5 {@include padding-b5;}
+.h-padding-b6 {@include padding-b6;}

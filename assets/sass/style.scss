@@ -1,0 +1,72 @@
+//================================================//
+// VARIABLES
+// scss variables to be used across
+// everything.
+// color variables are adjusted with
+// each new project
+@import "variables/v-colors.scss";
+@import "variables/v-fonts.scss";
+@import "variables/v-sizes.scss";
+
+
+//================================================//
+// FRAMEWORKS
+// boilerplate and template code
+@import "framework/foundation/foundation.scss";
+
+
+//================================================//
+// MIXINS
+// mixins that can be reused across
+// rest of the scss code
+@import "mixins/mx-layout.scss";
+@import "mixins/mx-background.scss";
+@import "mixins/mx-tint.scss";
+@import "mixins/mx-border.scss";
+@import "mixins/mx-type.scss";
+@import "mixins/mx-utility.scss";
+
+
+//================================================//
+// GENERAL
+// general scss styles to be used
+// across all code
+@import "general/type.scss";
+@import "general/forms.scss";
+@import "general/tables.scss";
+// @import "general/print.scss";
+
+
+//================================================//
+// CLASSES
+// additional helper classes for
+// absolutlely everything
+@import "classes/c-layout.scss";
+@import "classes/c-background.scss";
+@import "classes/c-border.scss";
+@import "classes/c-type.scss";
+@import "classes/c-utility.scss";
+// @import "classes/c-tint.scss";
+
+
+//================================================//
+// ATOMS
+// singular html elements
+@import "atoms/a-button.scss";
+@import "atoms/a-type.scss";
+@import "atoms/a-avatar.scss";
+
+
+//================================================//
+// MOLECULES
+// a group of atoms to form
+// a common element used
+@import "molecules/m-nav.scss";
+
+
+//================================================//
+// DEVELOPMENT
+// please move all.scss code
+// into segmented file for re-use
+@import "general/all.scss";
+@import "general/styleguide.scss";

@@ -1,0 +1,174 @@
+//================================================//
+// TYPE
+// Mixins that are used to apply styling to text.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+//================================================//
+// ALIGNMENT
+@mixin tx-center {
+  text-align: center;
+}
+@mixin tx-right {
+  text-align: right;
+}
+@mixin tx-justify {
+  text-align: justify;
+}
+@mixin tx-center-small {
+  @media (max-width: 600px) {
+    text-align: center;
+  }
+}
+
+
+//================================================//
+// COLOR
+
+// brand colours
+@mixin tx-primary {
+  color: $v-primary;
+}
+@mixin tx-calm {
+  color: $v-calm;
+}
+@mixin tx-cream {
+  color: $v-cream;
+}
+
+// base colours
+@mixin tx-alert {
+  color: $v-alert;
+}
+@mixin tx-success {
+  color: $v-success;
+}
+@mixin tx-warning {
+  color: $v-warning;
+}
+@mixin tx-dark {
+  color: $v-dark;
+}
+@mixin tx-light {
+  color: $v-light;
+}
+@mixin tx-white {
+  color: white;
+}
+@mixin tx-black {
+  color: black;
+}
+
+
+//================================================//
+// SIZE
+@mixin tx-smallest {
+  font-size: .4em;
+  line-height: $v-size-lineheight-body;
+}
+@mixin tx-smaller {
+  font-size: .6em;
+  line-height: $v-size-lineheight-body;
+}
+@mixin tx-small {
+  font-size: .8em;
+  line-height: $v-size-lineheight-body;
+}
+@mixin tx-big {
+  font-size: 1.2em;
+  line-height: $v-size-lineheight-body;
+}
+@mixin tx-bigger {
+  font-size: 1.6em;
+  line-height: $v-size-lineheight-body;
+}
+@mixin tx-biggest {
+  font-size: 2em;
+  line-height: $v-size-lineheight-body;
+}
+
+
+//================================================//
+// FONT WEIGHT
+@mixin tx-weight-100 {
+  font-weight: 100;
+}
+@mixin tx-weight-200 {
+  font-weight: 200;
+}
+@mixin tx-weight-300 {
+  font-weight: 300;
+}
+@mixin tx-weight-400 {
+  font-weight: 400;
+}
+@mixin tx-weight-500 {
+  font-weight: 500;
+}
+@mixin tx-weight-600 {
+  font-weight: 600;
+}
+@mixin tx-weight-700 {
+  font-weight: 700;
+}
+@mixin tx-weight-800 {
+  font-weight: 800;
+}
+@mixin tx-weight-900 {
+  font-weight: 900;
+}
+
+
+//================================================//
+// LETTER SPACING
+@mixin tx-letterspacing-1 {
+  letter-spacing: 1px;
+}
+@mixin tx-letterspacing-2 {
+  letter-spacing: 2px;
+}
+@mixin tx-letterspacing-3 {
+  letter-spacing: 5px;
+}
+
+
+//================================================//
+// LISTS
+@mixin tx-list-none {
+  list-style: none;
+}
+
+
+
+//================================================//
+// DECORATION
+@mixin tx-decoration-none {
+  text-decoration: none;
+}
+@mixin tx-decoration-strike {
+  text-decoration: line-through;
+}
+@mixin tx-decoration-underline {
+  text-decoration: underline;
+}
+
+//================================================//
+// TRANSFORM
+@mixin tx-transform-uppercase {
+  text-transform: uppercase;
+}
+
+
+//================================================//
+// FAMILY
+@mixin tx-family-header {
+  font-family: $v-font-header;
+}
+@mixin tx-family-default {
+  font-family: $v-font-default;
+}
+@mixin tx-family-serif {
+  font-family: $v-font-serif;
+}

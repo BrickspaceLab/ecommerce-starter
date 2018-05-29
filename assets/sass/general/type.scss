@@ -1,0 +1,232 @@
+//================================================//
+// TYPE
+// Basic styleing for all standard typographic
+// elements.
+// status: ✅ LIVE
+// author: Thomas Kimura
+/**
+* ## Text Elements
+*/
+//================================================//
+
+
+body {
+  font-family: $v-font-default;
+  font-size: $v-size-base-mobile;
+  line-height: $v-size-lineheight-body;
+  word-wrap: break-word;
+  color: $v-color-text-body;
+  @media (min-width: 500px) {
+    font-size: $v-size-base-tablet;
+  }
+  @media (min-width: 900px) {
+    font-size: $v-size-base-desktop;
+  }
+}
+
+
+//================================================//
+/**
+* Paragraphs:
+*
+*     @example
+*     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+*/
+
+//================================================//
+/**
+* Lists:
+*
+*     @example
+*     <ul>
+*       <li>Item one</li>
+*       <li>Item two</li>
+*       <li>Item three</li>
+*     </ul>
+*     <ol>
+*       <li>Item one</li>
+*       <li>Item two</li>
+*       <li>Item three</li>
+*     </ol>
+*/
+p,
+li,
+blockquote,
+pre,
+input,
+a {
+  line-height: $v-size-lineheight-body;
+}
+
+
+//================================================//
+/**
+* Links:
+*
+*     @example
+*     <p>
+*       Here is a <a href="">link</a>.
+*     </p>
+*/
+a {
+  color: $v-primary;
+  &:hover {
+    @include opacity-3;
+  }
+  &:active {
+    @include opacity-4;
+  }
+}
+
+
+//================================================//
+/**
+* Headers:
+*
+*     @example
+*     <h1>Aa Header Text</h1>
+*     <h2>Aa Header Text</h2>
+*     <h3>Aa Header Text</h3>
+*     <h4>Aa Header Text</h4>
+*     <h5>Aa Header Text</h5>
+*     <h6>Aa Header Text</h6>
+*/
+h1 {
+  font-family: $v-font-header;
+  line-height: $v-size-lineheight-header;
+  color: $v-color-text-header;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $v-font-default;
+  line-height: $v-size-lineheight-header;
+  color: $v-color-text-header;
+}
+h5,
+h6 {
+  @include opacity-1;
+}
+
+h1 {
+  font-size: $v-size-mobile-h1;
+  @media (min-width: 500px) {
+    font-size: $v-size-tablet-h1;
+  }
+  @media (min-width: 900px) {
+    font-size: $v-size-desktop-h1;
+  }
+}
+
+
+h2 {
+  font-size: $v-size-mobile-h2;
+  @media (min-width: 500px) {
+    font-size: $v-size-tablet-h2;
+  }
+  @media (min-width: 900px) {
+    font-size: $v-size-desktop-h2;
+  }
+}
+
+
+h3 {
+  font-size: $v-size-mobile-h3;
+  @media (min-width: 500px) {
+    font-size: $v-size-tablet-h3;
+  }
+  @media (min-width: 900px) {
+    font-size: $v-size-desktop-h3;
+  }
+}
+
+
+h4 {
+  font-size: $v-size-mobile-h4;
+  @media (min-width: 500px) {
+    font-size: $v-size-tablet-h4;
+  }
+  @media (min-width: 900px) {
+    font-size: $v-size-desktop-h4;
+  }
+}
+
+
+h5 {
+  font-size: $v-size-mobile-h5;
+  @media (min-width: 500px) {
+    font-size: $v-size-tablet-h5;
+  }
+  @media (min-width: 900px) {
+    font-size: $v-size-desktop-h5;
+  }
+}
+
+
+h6 {
+  font-size: $v-size-mobile-h6;
+  @media (min-width: 500px) {
+    font-size: $v-size-tablet-h6;
+  }
+  @media (min-width: 900px) {
+    font-size: $v-size-desktop-h6;
+  }
+}
+
+
+//================================================//
+// ADDITONAL ELEMENTS
+//================================================//
+/**
+* Blockquotes:
+*
+*     @example
+*     <blockquote cite="www.google.com">Here we can display a blockquote
+*       <cite>Google.com</cite>
+*     </blockquote>
+*/
+blockquote {
+  border-left: solid 5px $v-light-700;
+
+  @include margin-none-l;
+  @include padding-1;
+  cite {
+    @include opacity-2;
+  }
+}
+
+dd {
+  margin-left: 0;
+}
+
+
+//================================================//
+/**
+* Keyboard:
+*
+*     @example
+*     <kbd>
+*       alt
+*     </kbd>
+*/
+kbd {
+  font-size: .8em;
+  padding: 4px;
+  white-space: nowrap;
+  border: 1px solid $v-light-600;
+  border-radius: $v-size-radius;
+  background: $v-light;
+  box-shadow: 0 2px 0 $v-light-600,0 0 0 3px rgba(255, 255, 255, .8) inset;
+}
+
+::selection {
+  color: $color-text-i-body;
+  background: $v-primary;
+}
+
+::-moz-selection {
+  color: $color-text-i-body;
+  background: $v-primary;
+}

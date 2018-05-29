@@ -1,0 +1,91 @@
+//================================================//
+// TINT
+// Helper classes used to create a transparent
+// background colours.
+// status: 🚧 IN-PROGRESS
+// author: Thomas Kimura
+//================================================//
+
+
+//================================================//
+// HOVER
+.hover-color-tint-dark-1:hover {
+  @include color-tint-dark-1;
+}
+.hover-color-tint-dark-2:hover {
+  @include color-tint-dark-2;
+}
+.hover-color-tint-dark-3:hover {
+  @include color-tint-dark-3;
+}
+.hover-color-tint-dark-4:hover {
+  @include color-tint-dark-4;
+}
+
+.hover-color-tint-light-1:hover {
+  @include color-tint-light-1;
+}
+.hover-color-tint-light-2:hover {
+  @include color-tint-light-2;
+}
+.hover-color-tint-light-3:hover {
+  @include color-tint-light-3;
+}
+.hover-color-tint-light-4:hover {
+  @include color-tint-light-4;
+}
+
+.hover-color-tint-primary-1:hover {
+  @include color-tint-primary-1;
+}
+.hover-color-tint-primary-2:hover {
+  @include color-tint-primary-2;
+}
+.hover-color-tint-primary-3:hover {
+  @include color-tint-primary-3;
+}
+.hover-color-tint-primary-4:hover {
+  @include color-tint-primary-4;
+}
+
+
+//================================================//
+// TINT
+.color-tint-dark-1 {
+  @include color-tint-dark-1;
+}
+.color-tint-dark-2 {
+  @include color-tint-dark-2;
+}
+.color-tint-dark-3 {
+  @include color-tint-dark-3;
+}
+.color-tint-dark-4 {
+  @include color-tint-dark-4;
+}
+
+.color-tint-light-1 {
+  @include color-tint-light-1;
+}
+.color-tint-light-2 {
+  @include color-tint-light-2;
+}
+.color-tint-light-3 {
+  @include color-tint-light-3;
+}
+.color-tint-light-4 {
+  @include color-tint-light-4;
+}
+
+.color-tint-primary-1 {
+  @include color-tint-primary-1;
+}
+.color-tint-primary-2 {
+  @include color-tint-primary-2;
+}
+.color-tint-primary-3 {
+  @include color-tint-primary-3;
+}
+.color-tint-primary-4 {
+  @include color-tint-primary-4;
+}

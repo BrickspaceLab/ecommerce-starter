@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="{{ shop.locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="">
+
+  <link rel="canonical" href="{{ canonical_url }}">
+
+  <title>{{ shop.name }}</title>
+
+  <meta name="description" content="">
+
+  {{ 'style.min.css' | asset_url | stylesheet_tag }}
+
+  {{ content_for_header }}
+
+</head>
+
+<body>
+  {% include 'navigation' %}
+  {{ content_for_layout }}
+  {% include 'footer' %}
+
+  <!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.3.0"></script>
+  <script src="{{ 'script.min.js' | asset_url }}"></script>
+  <script defer src="https://pro.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-d84LGg2pm9KhR4mCAs3N29GQ4OYNy+K+FBHX8WhimHpPm86c839++MDABegrZ3gn" crossorigin="anonymous"></script>
+  <!-- END SCRIPTS -->
+
+
+  <!-- STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Corporation",
+    "name": "[COMPANY]",
+    "alternateName": "[COMPANY]",
+    "url": "[URL]",
+    "logo": "[URL]siteicon.png",
+    "sameAs": [
+      "https://www.facebook.com/",
+      "https://twitter.com/",
+      "https://www.instagram.com//",
+      "https://github.com/",
+      "https://apps.shopify.com/partners/",
+      "https://medium.com/",
+      "https://dribbble.com/"
+    ]
+  }
+  </script>
+  <!-- END STRUCTURED DATA -->
+  
+</body>
+
+</html>

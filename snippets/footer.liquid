@@ -1,0 +1,82 @@
+<!-- SNIPPETS: footer.liquid -->
+
+<footer class="h-padding-tb2 h-border-solid-top h-border-color-dark">
+  <div class="row">
+    <div class="large-6 medium-6 small-12 columns h-tx-center-small">
+      <div class="row h-tablet-up">
+        <div class="large-4 medium-4 small-12 columns">
+          <p class="h-margin-none">
+            <a class="h-tx-dark" href="/">Home</a><br/>
+            <a class="h-tx-dark" href="/services">Services</a><br/>
+            <a class="h-tx-dark" href="/quote">Quote</a>
+          </p>
+        </div>
+        <div class="large-4 medium-4 small-12 columns">
+          <p class="h-margin-none">
+            <a class="h-tx-dark" href="/blog">Blog</a><br/>
+            <a class="h-tx-dark" href="/apps/directory">Apps</a>
+          </p>
+        </div>
+        <div class="large-4 medium-4 small-12 columns">
+          <p class="h-margin-none">
+            <a class="h-tx-dark" href="https://www.facebook.com/" target="_blank">Facebook</a><br/>
+            <a class="h-tx-dark" href="https://www.instagram.com/" target="_blank">Instagram</a><br/>
+            <a class="h-tx-dark" href="https://dribbble.com/" target="_blank">Dribbble</a>
+          </p>
+        </div>
+      </div>
+      <div class="row h-mobile-only">
+        <div class="small-12 columns">
+          <hr class="h-opacity-4 h-margin-none-t">
+          <a class="a-button--clear h-full" href="/">
+            Home
+          </a>
+          <hr class="h-opacity-4">
+          <a class="a-button--clear h-full" href="/services">
+            Services
+          </a>
+          <hr class="h-opacity-4">
+          <a class="a-button--clear h-full" href="/quote">
+            Quote
+          </a>
+          <hr class="h-opacity-4">
+          <a class="a-button--clear h-full" href="/blog">
+            Blog
+          </a>
+          <hr class="h-opacity-4">
+          <a class="a-button--clear h-full" href="/apps/directory">
+            Apps
+          </a>
+          <hr class="h-opacity-4">
+          <a class="a-button--clear h-full" href="https://www.facebook.com/" target="_blank">
+            Facebook
+          </a>
+          <hr class="h-opacity-4">
+          <a class="a-button--clear h-full" href="https://www.instagram.com/" target="_blank">
+            Instagram
+          </a>
+          <hr class="h-opacity-4">
+          <a class="a-button--clear h-full" href="https://dribbble.com/" target="_blank">
+            Dribbble
+          </a>
+          <hr class="h-opacity-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<section class="h-border-solid-top h-border-color-dark">
+  <div class="row h-padding-tb05">
+    <div class="large-4 medium-4 small-12 columns h-tx-center-small">
+      <p class="h-tx-small h-margin-none">
+        <a class="h-tx-dark" href="mailto:{{ shop.email }}">{{ shop.email }}</a>
+      </p>
+    </div>
+    <div class="large-8 medium-8 small-12 columns h-tx-right h-tx-center-small">
+      <p class="h-tx-subtle h-margin-none">Copyright © {{ 'now' | date: "%Y" }} Brickspace Lab Inc. All rights reserved.</p>
+    </div>
+  </div>
+</section>
+
+<!-- END: footer.liquid -->

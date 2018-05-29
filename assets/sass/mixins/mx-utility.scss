@@ -1,0 +1,130 @@
+//================================================//
+// UTILITY
+// Additional mixins to help style elements.
+// status: ✅ LIVE
+// author: Thomas Kimura
+//================================================//
+
+
+//================================================//
+// CORNERS
+@mixin rounded {
+  border-radius: $v-size-radius;
+}
+@mixin circular {
+  border-radius: 50%;
+}
+
+
+//================================================//
+// VISBILITY
+@mixin display-none {
+  display: none !important;
+}
+@mixin display-inline {
+  display: inline;
+}
+@mixin display-block {
+  display: block;
+}
+@mixin display-initial {
+  display: initial;
+}
+@mixin display-inlineblock {
+  display: inline-block;
+}
+@mixin display-print-none {
+  @media print {
+    display: none;
+  }
+}
+@mixin mobile-only {
+  @media (min-width: 600px) {
+    display: none !important;
+  }
+}
+@mixin desktop-only {
+  @media (max-width: 900px) {
+    display: none !important;
+  }
+}
+@mixin tablet-up {
+  @media (max-width: 600px) {
+    display: none !important;
+  }
+}
+@mixin tablet-down {
+  @media (min-width: 900px) {
+    display: none !important;
+  }
+}
+
+
+//================================================//
+// OVERFLOW
+@mixin overflow-hidden {
+  overflow: hidden;
+}
+@mixin overflow-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+//================================================//
+// Z-INDEX
+@mixin zindex-n10 {
+  z-index: -10;
+}
+@mixin zindex-n1 {
+  z-index: -1;
+}
+@mixin zindex-1 {
+  z-index: 1;
+}
+@mixin zindex-10 {
+  z-index: 10;
+}
+@mixin zindex-100 {
+  z-index: 100;
+}
+@mixin zindex-1000 {
+  z-index: 1000;
+}
+
+
+//================================================//
+// OPACITY
+@mixin opacity-full {
+  opacity: 1;
+}
+@mixin opacity-0 {
+  opacity: 0;
+}
+@mixin opacity-1 {
+  opacity: .8;
+}
+@mixin opacity-2 {
+  opacity: .6;
+}
+@mixin opacity-3 {
+  opacity: .4;
+}
+@mixin opacity-4 {
+  opacity: .2;
+}
+
+
+//================================================//
+// CURSOR
+@mixin cursor-pointer {
+  cursor: pointer;
+}
+
+
+//================================================//
+// SHADOW
+@mixin shadow-bottom {
+  box-shadow: 0 1px 5px $dark-50;
+}
