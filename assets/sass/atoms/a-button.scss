@@ -3,35 +3,28 @@
 // Styling to create a button element.
 // status: ✅ LIVE
 // author: Thomas Kimura
-/**
-* ## Buttons
-*/
 //================================================//
 
 
-//================================================//
-/**
-* Button:
-* `.a-button`
-*
-*     @example
-*     <a class="a-button">Button</a>
-*     <button class="a-button">Button</button>
-*/
 
 // Default Button
 //
-// Basic button
+// Basic button. Use `.a-button` to create basic button.
 //
 // Markup:
 // <button class="a-button {{modifier_class}}">Button Element</button>
 // <input class="a-button {{modifier_class}}" type="button" value="Input Button" />
+// <a class="a-button {{modifier_class}}">Button</a>
 //
-// .a-button--primary - A small button.
-// .a-button--dark - A large button.
-// .a-button--invert - Inverted
+// .a-button--primary - Primary button
+// .a-button--dark - Dark button.
+// .a-button--invert - Inverted butotn.
+// .a-button--plain-dark - Button for dark backgrounds.
+// .a-button--clear - Borderless button.
+// .a-button--small - Smaller button.
+// .a-button--nohover - Remove hover animation.
 //
-// Styleguide atoms.buttons
+// Styleguide Atoms.buttons.1
 .a-button {
   margin-right: .5rem;
   transition: box-shadow .3s cubic-bezier(.8, .43, 0, .48);
@@ -55,15 +48,6 @@
 }
 
 
-//================================================//
-/**
-* Button:
-* `.a-button--primary`
-*
-*     @example
-*     <a class="a-button--primary">Button</a>
-*     <button class="a-button--primary">Button</button>
-*/
 .a-button--primary {
   @extend .a-button;
   @include tx-white;
@@ -71,15 +55,6 @@
 }
 
 
-//================================================//
-/**
-* Button:
-* `.a-button--dark`
-*
-*     @example
-*     <a class="a-button--dark">Button</a>
-*     <button class="a-button--dark">Button</button>
-*/
 .a-button--dark {
   @extend .a-button;
   @include tx-white;
@@ -89,17 +64,6 @@
 }
 
 
-//================================================//
-/**
-* Button:
-* `.a-button--invert`
-*
-*     @example
-*     <div class="h-cb-dark h-padding-05">
-*       <a class="a-button--invert">Button</a>
-*       <button class="a-button--invert">Button</button>
-*     </div>
-*/
 .a-button--invert {
   border-color: white;
 
@@ -112,17 +76,6 @@
 }
 
 
-//================================================//
-/**
-* Button:
-* `.a-button--plain-dark`
-*
-*     @example
-*     <div class="h-cb-dark h-padding-05">
-*       <a class="a-button--plain-dark">Button</a>
-*       <button class="a-button--plain-dark">Button</button>
-*     </div>
-*/
 .a-button--plain-dark {
   border-color: transparent;
 
@@ -134,15 +87,6 @@
 }
 
 
-//================================================//
-/**
-* Button:
-* `.a-button--clear`
-*
-*     @example
-*     <a class="a-button--clear">Button</a>
-*     <button class="a-button--clear">Button</button>
-*/
 .a-button--clear {
   border: none;
 
@@ -154,45 +98,12 @@
 }
 
 
-//================================================//
-/**
-* Button:
-* `.a-button--small`
-*
-*     @example
-*     <a class="a-button--small">Button</a>
-*     <button class="a-button--small">Button</a>
-*/
 .a-button--small {
   @extend .a-button;
   @include padding-05;
 }
 
 
-//================================================//
-/**
-* Button:
-* `.a-button--chop-left`
-*
-*     @example
-*     <a class="a-button--small button--chop-left">Button</a>
-*     <button class="a-button--small button--chop-left">Button</a>
-*/
-.a-button--chop-left {
-  border-top-left-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
-}
-
-
-//================================================//
-/**
-* Button:
-* `.a-button--nohover`
-*
-*     @example
-*     <a class="a-button--nohover">Button</a>
-*     <button class="a-button--nohover">Button</button>
-*/
 .a-button--nohover {
   @extend .a-button;
   &:hover {

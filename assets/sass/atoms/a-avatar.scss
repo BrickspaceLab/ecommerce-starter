@@ -3,20 +3,19 @@
 // Styling to create a circular avatars.
 // status: ✅ LIVE
 // author: Thomas Kimura
-/**
-* ## Avatars
-*/
 //================================================//
 
 
-//================================================//
-/**
-* Avatar:
-* `.a-avatar`
-*
-*     @example
-*     <img class="a-avatar" src="https://avatars.io/instagram/"/>
-*/
+// Default Avatar
+//
+// Display user avatar in cirular thumbnail.
+//
+// Markup:
+// <img class="a-avatar {{modifier_class}}" src="https://avatars.io/instagram/"/>
+//
+// .a-avatar--2x - Increase size of avatar.
+//
+// Styleguide Atoms.avatars.1
 .a-avatar {
   @include circular;
   @include border-solid;
@@ -24,13 +23,7 @@
   height: 1.618em;
 }
 
-/**
-* Avatar:
-* `.a-avatar--2x`
-*
-*     @example
-*     <img class="a-avatar--2x" src="https://avatars.io/instagram/"/>
-*/
+
 .a-avatar--2x {
   @extend .a-avatar;
   height: 2.618em;

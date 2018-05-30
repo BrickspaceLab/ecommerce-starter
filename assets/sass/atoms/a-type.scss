@@ -3,50 +3,32 @@
 // Styling to create a button element.
 // status: ✅ LIVE
 // author: Thomas Kimura
-/**
-* ## Text Styles
-*/
 //================================================//
 
 
-//================================================//
-/**
-* Subtle Text:
-* `.h-tx-subtle`
-*
-*     @example
-*     <span class="h-tx-subtle">Text</span>
-*/
-.h-tx-subtle {
+// Subtle text
+//
+// Display text smaller with a slight transparency.
+//
+// Markup:
+// <span class="a-tx-subtle">Subtle text element</span>
+//
+// Styleguide Atoms.text.1
+.a-tx-subtle {
   @include opacity-2;
   @include tx-small;
 }
 
-//================================================//
-/**
-* Spaced Text:
-* `.h-tx-spaced`
-*
-*     @example
-*     <span class="h-tx-spaced">Text</span>
-*/
-.h-tx-spaced {
+
+// Spaced text
+//
+// Display uppercase text with letter spacing applied.
+//
+// Markup:
+// <span class="a-tx-spaced">Spaced text element</span>
+//
+// Styleguide Atoms.text.2
+.a-tx-spaced {
   @include tx-letterspacing-2;
   @include tx-transform-uppercase;
-}
-
-//================================================//
-/**
-* Underlined Title:
-* `.h-tx-underlinedtitle`
-*
-*     @example
-*     <h3 class="h-tx-underlinedtitle"><span>TEXT</span></h3>
-*/
-.h-tx-underlinedtitle {
-  @include opacity-2;
-  @include tx-transform-uppercase;
-  span {
-    @include border-solid-bottom;
-  }
 }

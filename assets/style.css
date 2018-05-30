@@ -3393,44 +3393,6 @@ tr th:last-child {
   padding-bottom: 6em;
 }
 
-/**
-* ## Background Colours
-*/
-/**
-* Gradient colours:
-*
-*     @example
-*     <span class="h-cb-gradient styleguide-colorblock">#3f52e3 > #1828a4 > #1f1f3a</span>
-*/
-.h-cb-gradient {
-  background: -webkit-gradient(linear, left top, right top, from(#3f52e3), color-stop(#1828a4), to(#1f1f3a));
-  background: linear-gradient(to right, #3f52e3, #1828a4, #1f1f3a);
-}
-
-/**
-* Base colours:
-*
-*     @example
-*     <span class="h-cb-white styleguide-colorblock">white #fff</span>
-*     <span class="h-cb-black styleguide-colorblock">black #000</span>
-*/
-.h-cb-white {
-  background: white;
-}
-
-.h-cb-black {
-  background: black;
-}
-
-/**
-* Brand colours:
-*
-*     @example
-*     <span class="h-cb-primary styleguide-colorblock">primary #5e15ec</span>
-*     <span class="h-cb-midnight styleguide-colorblock">midnight #1f1f3a</span>
-*     <span class="h-cb-calm styleguide-colorblock">calm #e5e3e3</span>
-*     <span class="h-cb-cream styleguide-colorblock">cream #f9f7f7</span>
-*/
 .h-cb-primary {
   background: #3F52E3;
   border-color: #3F52E3;
@@ -3451,16 +3413,19 @@ tr th:last-child {
   border-color: #f9f7f7;
 }
 
-/**
-* Additonal colours:
-*
-*     @example
-*     <span class="h-cb-alert styleguide-colorblock">alert #af3535</span>
-*     <span class="h-cb-success styleguide-colorblock">success #1cc374</span>
-*     <span class="h-cb-warning styleguide-colorblock">warning #eadc17</span>
-*     <span class="h-cb-dark styleguide-colorblock">dark #121121</span>
-*     <span class="h-cb-light styleguide-colorblock">light #f8f8f8</span>
-*/
+.h-cb-white {
+  background: white;
+}
+
+.h-cb-black {
+  background: black;
+}
+
+.h-cb-gradient {
+  background: -webkit-gradient(linear, left top, right top, from(#3f52e3), color-stop(#1828a4), to(#1f1f3a));
+  background: linear-gradient(to right, #3f52e3, #1828a4, #1f1f3a);
+}
+
 .h-cb-alert {
   background: #F44336;
   border-color: #F44336;
@@ -3486,20 +3451,6 @@ tr th:last-child {
   border-color: #F9F7F7;
 }
 
-/**
-* Primary shades:
-*
-*     @example
-*     <span class="h-cb-primary-50 styleguide-colorblock">primary-50</span>
-*     <span class="h-cb-primary-100 styleguide-colorblock">primary-100</span>
-*     <span class="h-cb-primary-200 styleguide-colorblock">primary-200</span>
-*     <span class="h-cb-primary-300 styleguide-colorblock">primary-300</span>
-*     <span class="h-cb-primary-400 styleguide-colorblock">primary-400</span>
-*     <span class="h-cb-primary-500 styleguide-colorblock">primary-500</span>
-*     <span class="h-cb-primary-600 styleguide-colorblock">primary-600</span>
-*     <span class="h-cb-primary-800 styleguide-colorblock">primary-800</span>
-*     <span class="h-cb-primary-900 styleguide-colorblock">primary-900</span>
-*/
 .h-cb-primary {
   background: #3F52E3;
   border-color: #3F52E3;
@@ -3543,6 +3494,141 @@ tr th:last-child {
 
 .h-cb-primary-900 {
   background: #111d78;
+}
+
+.h-cb-midnight {
+  background: #1F1F3A;
+  border-color: #1F1F3A;
+}
+
+.h-cb-midnight-50 {
+  background: #4b4b8d;
+}
+
+.h-cb-midnight-100 {
+  background: #4b4b8d;
+}
+
+.h-cb-midnight-200 {
+  background: #3a3a6c;
+}
+
+.h-cb-midnight-300 {
+  background: #31315b;
+}
+
+.h-cb-midnight-400 {
+  background: #28284b;
+}
+
+.h-cb-midnight-500 {
+  background: #1F1F3A;
+}
+
+.h-cb-midnight-600 {
+  background: #161629;
+}
+
+.h-cb-midnight-700 {
+  background: #0d0d19;
+}
+
+.h-cb-midnight-800 {
+  background: black;
+}
+
+.h-cb-midnight-900 {
+  background: black;
+}
+
+.h-cb-calm {
+  background: #e5e3e3;
+  border-color: #e5e3e3;
+}
+
+.h-cb-calm-50 {
+  background: #f9f8f8;
+}
+
+.h-cb-calm-100 {
+  background: #f9f8f8;
+}
+
+.h-cb-calm-200 {
+  background: #f4f3f3;
+}
+
+.h-cb-calm-300 {
+  background: #efeeee;
+}
+
+.h-cb-calm-400 {
+  background: #eae8e8;
+}
+
+.h-cb-calm-500 {
+  background: #e5e3e3;
+}
+
+.h-cb-calm-600 {
+  background: #d9d6d6;
+}
+
+.h-cb-calm-700 {
+  background: #ccc9c9;
+}
+
+.h-cb-calm-800 {
+  background: #b4aeae;
+}
+
+.h-cb-calm-900 {
+  background: #9b9494;
+}
+
+.h-cb-cream {
+  background: #f9f7f7;
+  border-color: #f9f7f7;
+}
+
+.h-cb-cream-50 {
+  background: white;
+}
+
+.h-cb-cream-100 {
+  background: white;
+}
+
+.h-cb-cream-200 {
+  background: white;
+}
+
+.h-cb-cream-300 {
+  background: white;
+}
+
+.h-cb-cream-400 {
+  background: white;
+}
+
+.h-cb-cream-500 {
+  background: #f9f7f7;
+}
+
+.h-cb-cream-600 {
+  background: #eee8e8;
+}
+
+.h-cb-cream-700 {
+  background: #e3dada;
+}
+
+.h-cb-cream-800 {
+  background: #cdbdbd;
+}
+
+.h-cb-cream-900 {
+  background: #b7a0a0;
 }
 
 .h-border-none {
@@ -3884,26 +3970,6 @@ tr th:last-child {
   cursor: pointer;
 }
 
-/**
-* ## Buttons
-*/
-/**
-* Button:
-* `.a-button`
-*
-*     @example
-*     <a class="a-button">Button</a>
-*     <button class="a-button">Button</button>
-*/
-/***
-  title: Square buttons
-  section: Buttons
-  description: Very pretty square buttons
-  example: |
-    <a href="" class="btn btn-small">button</a>
-    <a href="" class="btn btn-medium">button</a>
-    <a href="" class="btn btn-large">button</a>
-***/
 .a-button, .a-button--primary, .a-button--dark, .a-button--invert, .a-button--plain-dark, .a-button--clear, .a-button--small, .a-button--nohover {
   margin-right: .5rem;
   -webkit-transition: -webkit-box-shadow 0.3s cubic-bezier(0.8, 0.43, 0, 0.48);
@@ -3932,28 +3998,12 @@ tr th:last-child {
   opacity: .6;
 }
 
-/**
-* Button:
-* `.a-button--primary`
-*
-*     @example
-*     <a class="a-button--primary">Button</a>
-*     <button class="a-button--primary">Button</button>
-*/
 .a-button--primary {
   color: white;
   background: #3F52E3;
   border-color: #3F52E3;
 }
 
-/**
-* Button:
-* `.a-button--dark`
-*
-*     @example
-*     <a class="a-button--dark">Button</a>
-*     <button class="a-button--dark">Button</button>
-*/
 .a-button--dark {
   color: white;
   background: #161625;
@@ -3961,16 +4011,6 @@ tr th:last-child {
   border-color: white;
 }
 
-/**
-* Button:
-* `.a-button--invert`
-*
-*     @example
-*     <div class="h-cb-dark h-padding-05">
-*       <a class="a-button--invert">Button</a>
-*       <button class="a-button--invert">Button</button>
-*     </div>
-*/
 .a-button--invert {
   border-color: white;
   color: white;
@@ -3982,16 +4022,6 @@ tr th:last-child {
           box-shadow: white 7px 7px 0 0;
 }
 
-/**
-* Button:
-* `.a-button--plain-dark`
-*
-*     @example
-*     <div class="h-cb-dark h-padding-05">
-*       <a class="a-button--plain-dark">Button</a>
-*       <button class="a-button--plain-dark">Button</button>
-*     </div>
-*/
 .a-button--plain-dark {
   border-color: transparent;
   color: white;
@@ -4001,14 +4031,6 @@ tr th:last-child {
   border-color: #b7a0a0;
 }
 
-/**
-* Button:
-* `.a-button--clear`
-*
-*     @example
-*     <a class="a-button--clear">Button</a>
-*     <button class="a-button--clear">Button</button>
-*/
 .a-button--clear {
   border: none;
 }
@@ -4019,99 +4041,27 @@ tr th:last-child {
   background: rgba(0, 0, 0, 0.1);
 }
 
-/**
-* Button:
-* `.a-button--small`
-*
-*     @example
-*     <a class="a-button--small">Button</a>
-*     <button class="a-button--small">Button</a>
-*/
 .a-button--small {
   padding: .5em;
 }
 
-/**
-* Button:
-* `.a-button--chop-left`
-*
-*     @example
-*     <a class="a-button--small button--chop-left">Button</a>
-*     <button class="a-button--small button--chop-left">Button</a>
-*/
-.a-button--chop-left {
-  border-top-left-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
-}
-
-/**
-* Button:
-* `.a-button--nohover`
-*
-*     @example
-*     <a class="a-button--nohover">Button</a>
-*     <button class="a-button--nohover">Button</button>
-*/
 .a-button--nohover:hover {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
   opacity: 0.8;
 }
 
-/**
-* ## Text Styles
-*/
-/**
-* Subtle Text:
-* `.h-tx-subtle`
-*
-*     @example
-*     <span class="h-tx-subtle">Text</span>
-*/
-.h-tx-subtle {
+.a-tx-subtle {
   opacity: .6;
   font-size: .8em;
   line-height: 1.618;
 }
 
-/**
-* Spaced Text:
-* `.h-tx-spaced`
-*
-*     @example
-*     <span class="h-tx-spaced">Text</span>
-*/
-.h-tx-spaced {
+.a-tx-spaced {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-/**
-* Underlined Title:
-* `.h-tx-underlinedtitle`
-*
-*     @example
-*     <h3 class="h-tx-underlinedtitle"><span>TEXT</span></h3>
-*/
-.h-tx-underlinedtitle {
-  opacity: .6;
-  text-transform: uppercase;
-}
-
-.h-tx-underlinedtitle span {
-  border-bottom: 1px solid;
-}
-
-/**
-* ## Avatars
-*/
-/**
-* Avatar:
-* `.a-avatar`
-*
-*     @example
-*     <img class="a-avatar" src="https://avatars.io/instagram/"/>
-*/
 .a-avatar, .a-avatar--2x {
   border-radius: 50%;
   border-width: 1px;
@@ -4120,13 +4070,6 @@ tr th:last-child {
   height: 1.618em;
 }
 
-/**
-* Avatar:
-* `.a-avatar--2x`
-*
-*     @example
-*     <img class="a-avatar--2x" src="https://avatars.io/instagram/"/>
-*/
 .a-avatar--2x {
   height: 2.618em;
 }

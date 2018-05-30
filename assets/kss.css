@@ -1,0 +1,123 @@
+/* misc */
+.kss-toolbar {
+  display: none !important;
+}
+
+.kss-source.kss-style {
+  opacity: 0.5;
+}
+
+.kss-markup summary {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  cursor: pointer;
+}
+
+h1.kss-doc-title {
+  padding: 10px;
+
+  color: white;
+  background: black;
+}
+
+
+/* sidebar */
+.kss-sidebar.kss-style {
+  border-right: 1px solid #161625;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+span.kss-nav__ref.kss-nav__ref-child {
+  padding-left: 15px;
+}
+
+a.kss-nav__menu-link {
+  text-decoration: underline;
+
+  color: black !important;
+
+  text-decoration-color: #ccc;
+}
+
+.kss-sidebar.kss-style {
+  padding-right: 20px !important;
+}
+
+
+/* section */
+.kss-section {
+  margin-bottom: 100px !important;
+  padding-right: 10px;
+  padding-bottom: 100px;
+  padding-left: 10px;
+
+  border-bottom: 1px solid #161625;
+}
+
+.kss-section.kss-section--depth-1 {
+  padding-top: 10px;
+  padding-bottom: 500px;
+
+  background: #fafafa;
+}
+
+.kss-main article {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+/* card */
+.kss-modifier__heading.kss-style {
+  margin-bottom: 0px !important;
+}
+
+.kss-modifier__default-name.kss-style {
+  margin: 0 -10px 10px -10px;
+  padding: 10px;
+
+  background-color: #fafafa;
+}
+
+.kss-modifier__description.kss-style {
+  margin: 0 -10px 10px -10px;
+  margin-top: 0px;
+  padding: 10px;
+
+  border-top: 1px solid #ccc;
+    background-color: #fafafa;
+}
+
+.kss-modifier__name.kss-style {
+  float: right !important;
+
+  padding: 3px;
+
+  border: 1px solid #ccc;
+  border-top: none;
+  background: #eee;
+  background-color: #eee;
+
+  font-size: 12px;
+}
+
+.kss-modifier__example {
+  padding-top: 10px;
+}
+
+
+/* general */
+p code {
+  padding: 3px;
+
+  border: 1px solid #ccc;
+  border-radius: 3px;
+
+  font-size: 0.8em !important;
+}
+
+pre.prettyprint {
+  font-size: 80% !important;
+}

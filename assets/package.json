@@ -18,9 +18,11 @@
     "gulp-uglify": "^3.0.0",
     "kss": "^3.0.0-beta.20",
     "michelangelo": "^0.7.0",
+    "onchange": "^4.0.0",
     "styledown": "^2.0.0-pre1"
   },
   "scripts": {
+    "watch": "onchange 'sass/**/*.scss' -- npm run kss",
     "kss": "kss --config kss-config.json"
   }
 }

@@ -3,7 +3,8 @@
   "source": "sass/",
   "destination": "styleguide/",
   "css": [
-    "../style.min.css"
+    "../style.min.css",
+    "../kss.css"
   ],
   "js" : [
     "../script.min.js"

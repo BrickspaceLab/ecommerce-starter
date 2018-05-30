@@ -66,4 +66,4 @@
 1. Run `theme watch` in root
 1. Run `sudo npm install` in assets directory
 1. Run `gulp watch` in assets directory
-1. Run `npm run kss` to generate styleguide
+1. Run `npm run watch` to generate styleguide

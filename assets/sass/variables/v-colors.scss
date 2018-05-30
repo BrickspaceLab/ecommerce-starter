@@ -28,6 +28,17 @@ $v-primary-700: darken($v-primary, 10%);
 $v-primary-800: darken($v-primary, 20%);
 $v-primary-900: darken($v-primary, 30%);
 
+$v-midnight-50: lighten($v-midnight, 30%);
+$v-midnight-100: lighten($v-midnight, 25%);
+$v-midnight-200: lighten($v-midnight, 15%);
+$v-midnight-300: lighten($v-midnight, 10%);
+$v-midnight-400: lighten($v-midnight, 5%);
+$v-midnight-500: $v-midnight;
+$v-midnight-600: darken($v-midnight, 5%);
+$v-midnight-700: darken($v-midnight, 10%);
+$v-midnight-800: darken($v-midnight, 20%);
+$v-midnight-900: darken($v-midnight, 30%);
+
 $v-calm-50: lighten($v-calm, 10%);
 $v-calm-100: lighten($v-calm, 8%);
 $v-calm-200: lighten($v-calm, 6%);
