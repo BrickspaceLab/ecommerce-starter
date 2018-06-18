@@ -7,9 +7,17 @@
 //================================================//
 
 
-.h-border-none {
-  @include border-none;
-}
+// Border styles
+//
+// Markup:
+// <div class="h-padding-1 {{modifier_class}}">{{modifier_class}}</div>
+//
+// .h-border-solid - Solid border
+// .h-border-wide - Wide border
+// .h-border-dashed - Dashed border
+// .h-border-dotted - Dotted border
+//
+// Styleguide Helper Classes.border.1
 .h-border-wide {
   @include border-wide;
 }
@@ -22,6 +30,19 @@
 .h-border-solid {
   @include border-solid;
 }
+
+
+// Border positions
+//
+// Markup:
+// <div class="h-padding-1 {{modifier_class}}">{{modifier_class}}</div>
+//
+// .h-border-solid-top - Solid border, top only
+// .h-border-solid-right - Solid border, right only
+// .h-border-solid-bottom - Solid border, bottom only
+// .h-border-solid-left - Solid border, left only
+//
+// Styleguide Helper Classes.border.2
 .h-border-solid-top {
   @include border-solid-top;
 }
@@ -34,6 +55,17 @@
 .h-border-solid-left {
   @include border-solid-left;
 }
+
+// Border colours
+//
+// Markup:
+// <div class="h-padding-1 h-border-solid {{modifier_class}}">{{modifier_class}}</div>
+//
+// .h-border-color-calm - Calm border
+// .h-border-color-calm - Cream border
+// .h-border-color-dark - Dark border
+//
+// Styleguide Helper Classes.border.3
 .h-border-color-calm {
   border-color: $v-calm;
 }
@@ -42,4 +74,23 @@
 }
 .h-border-color-dark {
   border-color: $v-dark;
+}
+
+
+// Border adjustments
+//
+// Markup:
+// <div class="h-padding-1 h-border-solid {{modifier_class}}">{{modifier_class}}</div>
+//
+// .h-border-none - Remove borders
+// .h-border-none__mobile - Remove borders on mobile
+//
+// Styleguide Helper Classes.border.4
+.h-border-none {
+  @include border-none;
+}
+@media (max-width: 600px) {
+  .h-border-none__mobile {
+    @include border-none;
+  }
 }

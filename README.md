@@ -21,6 +21,8 @@
 - [ ]  JSON structured data
 - [ ]  Google analytics
 - [ ]  Facebook pixel
+- [ ]  Additonal tracking
+- [ ]  Privacy policy / Terms and conditions
 
 ## Design
 
@@ -62,8 +64,8 @@
 - [ ]  Share admin access to Facebook pixel and Google Analytics
 
 # Setup
-
-1. Run `theme watch` in root
-1. Run `sudo npm install` in assets directory
-1. Run `gulp watch` in assets directory
-1. Run `npm run watch` to generate styleguide
+1. Setup Shopify Theme Kit - `theme configure --password=[your-api-password] --store=[your-store.myshopify.com] --themeid=[your-theme-id]`
+1. Run `theme watch` in root to sync to live Shopify storefront
+1. Run `sudo npm install` in assets directory to install dependices
+1. Run `gulp watch` in assets directory to compile css/js
+1. Run `npm run watch` in assets directory to generate styleguide

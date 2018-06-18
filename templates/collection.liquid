@@ -2,6 +2,7 @@
 
 {% paginate collection.products by 12 %}
 
+<!-- header -->
 <header class="h-padding-tb2">
   <div class="row align-center">
 
@@ -16,8 +17,9 @@
 
   </div>
 </header>
+<!-- end header -->
 
-
+<!-- products -->
 <section>
   <div class="row align-center">
     {% for product in collection.products %}
@@ -27,8 +29,9 @@
     {% endfor %}
   </div>
 </section>
+<!-- end products -->
 
-
+<!-- pagination -->
 {% if paginate.pages > 1 %}
 <section class="h-border-solid-top h-border-color-dark">
   <div class="row align-center h-padding-tb1">
@@ -40,7 +43,7 @@
   </div>
 </section>
 {% endif %}
-
+<!-- end pagination -->
 
 {% endpaginate %}
 

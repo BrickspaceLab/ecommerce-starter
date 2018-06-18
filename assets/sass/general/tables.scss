@@ -39,6 +39,10 @@ table {
 
 table tr {
   border-bottom: solid 1px $v-calm;
+
+}
+
+table tbody tr {
   &:hover {
     border-bottom: solid 1px $v-color-text-body;
     background: $v-cream;

@@ -2615,7 +2615,7 @@ a:active {
 *     <h6>Aa Header Text</h6>
 */
 h1 {
-  font-family: "Vesper Libre", serif;
+  font-family: "Inconsolata", monospace;
   line-height: 1.2;
   color: #030305;
 }
@@ -2829,7 +2829,6 @@ select,
 button {
   font-size: 1em;
   max-width: 100%;
-  padding: .5rem !important;
   border: 1px solid #e5e3e3;
   outline: none;
   padding: .5em;
@@ -2934,7 +2933,7 @@ table tr {
   border-bottom: solid 1px #e5e3e3;
 }
 
-table tr:hover {
+table tbody tr:hover {
   border-bottom: solid 1px #202035;
   background: #f9f7f7;
 }
@@ -3631,10 +3630,6 @@ tr th:last-child {
   background: #b7a0a0;
 }
 
-.h-border-none {
-  border: none;
-}
-
 .h-border-wide {
   border: solid 5px;
 }
@@ -3680,6 +3675,16 @@ tr th:last-child {
 
 .h-border-color-dark {
   border-color: #161625;
+}
+
+.h-border-none {
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .h-border-none__mobile {
+    border: none;
+  }
 }
 
 .h-tx-center {

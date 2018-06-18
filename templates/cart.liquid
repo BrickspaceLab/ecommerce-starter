@@ -1,0 +1,171 @@
+<!-- TEMPLATES: cart.liquid -->
+
+{% if cart.item_count > 0 %}
+
+<!-- header -->
+<header class="h-padding-tb2">
+  <div class="row align-center">
+
+    <div class="large-12 medium-12 small-12 columns">
+      <h1 class="h-margin-none">
+        Your Cart
+      </h1>
+    </div>
+
+  </div>
+</header>
+<!-- end header -->
+
+<!-- cart -->
+<div class="row align-center">
+  <div class="small-12 columns">
+
+    <form action="/cart" method="post" novalidate>
+
+      <!-- table -->
+      <table style="width:100%">
+        <thead>
+          <th>Item</th>
+          <th style="min-width: 64px; max-width: 256px; width: 100px;">Qty</th>
+          <th style="min-width: 64px; max-width: 256px; width: 150px;">Price</th>
+        </thead>
+        <tbody>
+          {% for item in cart.items %}
+            <tr>
+              <td>
+                <div class="row align-middle">
+                  <div class="columns shrink">
+                    <a title="{{item.title}}" href="{{ item.url | within: collections.all }}">
+                      <img class="padding-tb1" src="{{ item | img_url: '64x64', crop:'center' }}" alt="{{ item.title | escape }}">
+                    </a>
+                  </div>
+                  <div class="columns">
+                    <a title="{{item.title}}" href="{{ item.url }}">{{ item.product.title }}</a>
+                    {% unless item.variant.title contains 'Default' %}
+                      <small>- {{ item.variant.title }}</small>
+                    {% endunless %}
+
+                    {% if settings.cart_vendor_enable %}
+                      <p>{{ item.vendor }}</p>
+                    {% endif %}
+
+
+                    {% assign property_size = item.properties | size %}
+                    {% if property_size > 0 %}
+                      {% for p in item.properties %}
+                        {% unless p.last == blank %}
+                          {{ p.first }}:
+
+                          {% comment %}
+                            Check if there was an uploaded file associated
+                          {% endcomment %}
+                          {% if p.last contains '/uploads/' %}
+                            <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                          {% else %}
+                            {{ p.last }}
+                          {% endif %}
+                        {% endunless %}
+                      {% endfor %}
+                    {% endif %}
+                    <div class="h-float-right h-padding-lr1">
+                      <a class="h-tx-dark" title="Remove item from cart" href="/cart/change?line={{ forloop.index }}&amp;quantity=0">
+                        <i class="far fa-trash-alt"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td data-label="{{ 'cart.label.quantity' | t }}" class="border-solid-left border-color-calm text-center">
+                <input type="number" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="0">
+              </td>
+              <td data-label="{{ 'cart.label.total' | t }}" class="text-center border-solid-left border-color-calm">
+                <span class="money">
+                  {{ item.line_price | money_with_currency }}
+                </span>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <!-- end table -->
+
+      <!-- upsell -->
+      {% if cart.total_price <= 7499 %}
+        <div class="h-padding-1 h-cb-calm">
+          <p class="h-tx-small h-margin-none">You're <strong><span class="money">${{ cart.total_price | minus:10000 | abs | money_without_currency }} CAD</span></strong> away from <strong>free shipping</strong></p>
+        </div>
+      {% endif %}
+      {% if cart.total_price >= 9999 %}
+        <div class="h-padding-1 h-cb-calm">
+          <p class="h-tx-small h-margin-none">You'll receive <strong>FREE</strong> shipping</p>
+        </div>
+      {% endif %}
+      <!-- end upsell -->
+
+      <!-- footnote -->
+      <div class="row align-middle h-padding-tb1 h-border-solid-bottom h-border-color-calm h-tx-small">
+        <div class="medium-6 small-12 columns">
+          Questions about your order? <a href="/pages/contact">Contact</a> us.
+        </div>
+        <div class="medium-6 small-12 columns">
+          <div class="h-tx-right">
+            <input type="submit" name="update" class="a-button a-button--small h-margin-none" value="Update cart">
+          </div>
+        </div>
+      </div>
+      <!-- end footnote -->
+
+      <!-- checkout buttons -->
+      <div class="row">
+        <div class="large-12 columns h-tx-right">
+
+          <p class="h-margin-none h-padding-tb1">
+            <strong>
+              <span>Subtotal</span>
+              <span class="money">{{ cart.total_price | money_with_currency }}</span>
+            </strong>
+          </p>
+
+          <div class="row columns h-padding-b1 h-border-solid-bottom h-border-color-calm">
+            <span class="a-tx-subtle"><i class="fa fa-lock" aria-hidden="true"></i> Secure server</span>
+            <input type="submit" name="checkout" class="a-button--dark h-margin-none" value="Checkout">
+          </div>
+
+          <p class="a-tx-subtle">
+            Shipping, taxes and discounts are calculated at checkout
+          </p>
+
+        </div>
+      </div>
+      <!-- end checkout buttons -->
+
+    </form>
+  </div>
+</div>
+<!-- end cart -->
+
+{% else %}
+
+<!-- header -->
+<header class="h-padding-tb4">
+  <div class="row align-center">
+
+    <div class="large-12 medium-12 small-12 columns">
+      <h1 class="h-margin-none-b">
+        Empty Cart
+      </h1>
+      <p class="h-margin-none h-tx-bigger h-tx-weight-500">
+        Looks there are no items in your cart.
+      </p>
+      <p class="text-center">
+        <a title="Shop now" class="a-button--dark" href="/">Continue shopping</a>
+      </p>
+    </div>
+
+  </div>
+</header>
+<!-- end header -->
+
+{% endif %}
+
+<!-- END: cart.liquid -->

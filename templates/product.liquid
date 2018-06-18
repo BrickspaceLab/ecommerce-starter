@@ -1,0 +1,173 @@
+<!-- TEMPLATES: product.liquid -->
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<!-- product -->
+<div class="row expanded collapse align-center">
+
+  <!-- image -->
+  <div class="large-8 medium-7 small-12 columns">
+    {% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+    <img class="h-full" src="{{ featured_image | img_url: '1024x1024' }}" data-zoom="{{ featured_image.src | img_url: '2048x2048' }}" alt="{{ featured_image.alt | escape }}">
+    {% if product.images.size > 1 %}
+      <ul>
+        {% unless product.tags contains 'HNTSINGLE' %}
+          <li onclick="$('.packingContainer').toggleClass('display-none');">
+            <img style="max-height: 6rem;" src="https://cdn.shopify.com/s/files/1/1136/6710/files/packingthumbnail.png?15710261248744029495">
+          </li>
+        {% endunless %}
+        {% for image in product.images %}
+          <li>
+            <img data-full="{{ image.src | img_url: '1024x1024' }}" data-zoom="{{ image.src | img_url: '2048x2048' }}" src="{{ image.src | img_url: '1024x1024' }}" alt="{{ image.alt | escape }}">
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+  <!-- end image -->
+
+  <!-- description -->
+  <div class="large-4 medium-5 small-12 columns h-border-solid-left h-border-color-dark h-border-none__mobile">
+    <div class="h-padding-lr1">
+
+      <h1 class="margin-none-t h-tx-bigger">{{ product.title }}</h1>
+      <hr class="h-margin-tb05 h-opacity-4">
+
+      <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm" class="margin-none">
+
+        <select name="id" class="{% if product.variants.size <= 2 %}h-display-none{% endif %}">
+          {% for variant in product.variants %}
+            {% if variant.available %}
+              <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }}</option>
+            {% else %}
+              <option disabled="disabled">
+                {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+              </option>
+            {% endif %}
+          {% endfor %}
+        </select>
+        {% if product.variants.size >= 2 %}
+          <hr class="h-margin-tb05 h-opacity-4 ">
+        {% endif %}
+
+        <div class="row align-middle collapse">
+          <div class="small-6 columns">
+            {% if product.compare_at_price_min > product.price_min %}
+              Sale price
+            {% else %}
+              Price
+            {% endif %}
+          </div>
+          <div class="small-6 columns h-tx-right">
+            <span class="money">
+              {{ current_variant.price | money_with_currency | remove: '.00' }}
+            </span>
+            {% if product.compare_at_price_min > product.price_min %}
+              <s>
+                <span class="money">
+                  {{ current_variant.compare_at_price | money_with_currency | remove: '.00' }}
+                </span>
+              </s>
+            {% endif %}
+          </div>
+        </div>
+        <hr class="h-margin-tb05 h-opacity-4">
+
+        <div class="row align-middle collapse">
+          <div class="small-6 columns">
+            <label for="Quantity">Quantity</label>
+          </div>
+          <div class="small-6 columns">
+            <input class="h-full" type="number" name="quantity" value="1" min="1">
+          </div>
+        </div>
+        <hr class="h-margin-tb05 h-opacity-4">
+
+        <button type="submit" name="add" class="a-button--dark h-full"><span>Add to cart</span></button>
+        <hr class="h-margin-tb05 h-opacity-4">
+      </form>
+
+      <div class="h-padding-b2">
+        {{ product.description }}
+      </div>
+
+      <div class="h-padding-b2">
+        <i class="fab fa-facebook-square"></i>
+        <a target="_blank" title="Share to Facebook" class="padding-05 text-dark color-tint-dark-1 text-decoration-none" href="https://www.facebook.com/sharer/sharer.php?u={{ shop.url }}{{ product.url }}">Share</a>
+        /
+        <i class="fab fa-pinterest-square"></i>
+        <a target="_blank" title="Pin this product on Pinterest" class="padding-05 text-dark color-tint-dark-1 text-decoration-none" href="//pinterest.com/pin/create/button/?url={{ shop.url }}{{ product.url }}&amp;media=http:{{ product | img_url: '1024x1024' | split: '?' | first }}&amp;description={{ product.title | strip_html | truncate: 200, '' | url_param_escape }}{% for tag in product.tags limit: 3 %}{{ tag | replace: ' ', '-' | prepend: ' #' | url_param_escape }}{% endfor %}">Pin</a>
+        /
+        <i class="fab fa-twitter-square"></i>
+        <a target="_blank" title="Tweet about this product" class="padding-05 text-dark color-tint-dark-1 text-decoration-none" href="https://twitter.com/home?status={{ shop.url }}{{ product.url }}">Tweet</a>
+      </div>
+
+    </div>
+  </div>
+  <!-- end description -->
+
+</div>
+<!-- end product -->
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": "{{ product.title | escape }}",
+  "url": "{{ shop.url }}{{ product.url }}",
+  {% if product.featured_image %}
+    {% assign image_size = product.featured_image.width | append: 'x' %}
+    "image": [
+      "https:{{ product.featured_image.src | img_url: image_size }}"
+    ],
+  {% endif %}
+  "description": "{{ product.description | strip_html | escape }}",
+  {% if current_variant.sku != blank %}
+    "sku": "{{ current_variant.sku }}",
+  {% endif %}
+  "brand": {
+    "@type": "Thing",
+    "name": "{{ product.vendor | escape }}"
+  },
+  {% if product.variants %}
+    "offers": [
+      {% for variant in product.variants %}
+        {
+          "@type" : "Offer",
+          "availability" : "http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
+          "price" : "{{ variant.price | divided_by: 100.00 }}",
+          "priceCurrency" : "{{ shop.currency }}",
+          "url" : "{{ shop.url }}{{ variant.url }}",
+          "itemOffered" :
+          {
+              "@type" : "Product",
+              {% if variant.image %}
+                {% assign variant_image_size = variant.image.width | append: 'x' %}
+                "image": "http:{{ variant.image.src | img_url: variant_image_size }}",
+              {% endif %}
+              {% if variant.title != blank %}
+                "name" : "{{ variant.title | escape }}",
+              {% endif %}
+              {% if variant.sku != blank %}
+                "sku": "{{ variant.sku }}",
+              {% endif %}
+              {% if variant.weight != blank %}
+                "weight": {
+                  "@type": "QuantitativeValue",
+                  {% if variant.weight_unit != blank %}
+                    "unitCode": "{{ variant.weight_unit }}",
+                  {% endif %}
+                  "value": "{{ variant.weight | weight_with_unit: variant.weight_unit }}"
+                },
+              {% endif %}
+              "url": "{{ shop.url }}{{ variant.url }}"
+          }
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  {% endif %}
+}
+</script>
+
+<!-- END: product.liquid -->
